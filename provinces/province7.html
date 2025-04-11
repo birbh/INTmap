@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudurpashchim Province - Interactive Nepal Map</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Province-specific styles */
+        .province-hero {
+            background-image: url('../assets/images/sudurpashchim-bg.jpg');
+            background-size: cover;
+        }
+        
+        /* Province-specific colors */
+        .highlight-card h4,
+        .tourism-content h3 {
+            color: var(--province-7);
+        }
+        
+        .ethnic-card,
+        .language-card,
+        .festival-card {
+            border-left-color: var(--province-7);
+            background-color: rgba(147, 112, 219, 0.1);
+        }
+        
+        .back-button {
+            background-color: var(--province-7);
+        }
+    </style>
+</head>
+<body class="province-7-page">
+    <header class="header">
+        <div class="flag-colors">
+            <div class="crimson"></div>
+            <div class="blue"></div>
+            <div class="white"></div>
+        </div>
+        <div class="header-content">
+            <h1>Sudurpashchim Province</h1>
+            <p class="subtitle">Capital: Godawari | Far-Western Region</p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Main Map</a></li>
+                <li><a href="#geography">Geography</a></li>
+                <li><a href="#districts">Districts</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#tourism">Tourism</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="province-container">
+        <section class="province-hero province-7-bg">
+            <div class="container">
+                <div class="province-title">
+                    <h2>Sudurpashchim Province <span>(सुदूरपश्चिम प्रदेश)</span></h2>
+                    <p>The Western Frontier with Rich Cultural Heritage</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="geography" class="section province-section">
+            <div class="container">
+                <h2>Geography</h2>
+                <div class="geo-grid">
+                    <div class="geo-card">
+                        <h3>Area & Location</h3>
+                        <p>19,539 km² in far-western Nepal. Borders India to south/west and Tibet (China) to north. The name "Sudurpashchim" literally means "Far West" in Nepali, reflecting its geographic position at Nepal's western frontier.</p>
+                    </div>
+                    <div class="geo-card">
+                        <h3>Topography</h3>
+                        <p>Varied landscape from Himalayan peaks (Api - 7,132m, Saipal - 7,031m) to fertile Terai plains. The Mahakali River forms the western border with India. Contains Dadeldhura and Kailash mountain ranges with dramatic river valleys.</p>
+                    </div>
+                    <div class="geo-card">
+                        <h3>Climate</h3>
+                        <p>Subtropical in southern Terai (hot summers up to 42°C), temperate in mid-hills, and alpine in northern Himalayas (below freezing in winter). Drier than eastern Nepal with 1,000-1,500mm annual rainfall. Distinct monsoon season (June-September).</p>
+                    </div>
+                </div>
+                
+                <div class="province-map-container">
+                    <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" class="province-svg">
+                        <path d="M50,50 L100,30 L150,70 L130,120 L80,150 L40,100 Z" class="province-shape province-7"/>
+                        <circle cx="80" cy="100" r="5" class="capital-dot" aria-label="Godawari, Capital of Sudurpashchim"/>
+                        <text x="90" y="100" class="capital-label">Godawari</text>
+                        <!-- Shuklaphanta marker -->
+                        <circle cx="70" cy="120" r="4" class="landmark-dot" aria-label="Shuklaphanta National Park"/>
+                        <text x="80" y="120" class="landmark-label">Shuklaphanta</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="districts" class="section province-section">
+            <div class="container">
+                <h2>Districts</h2>
+                <div class="districts-content">
+                    <div class="districts-list">
+                        <h3>9 Districts of Sudurpashchim:</h3>
+                        <ul>
+                            <li>Kailali</li>
+                            <li>Kanchanpur</li>
+                            <li>Dadeldhura</li>
+                            <li>Baitadi</li>
+                            <li>Darchula</li>
+                            <li>Bajhang</li>
+                            <li>Bajura</li>
+                            <li>Achham</li>
+                            <li>Doti</li>
+                        </ul>
+                    </div>
+                    <div class="district-highlights">
+                        <h3>District Highlights</h3>
+                        <div class="highlight-card">
+                            <h4>Kanchanpur</h4>
+                            <p>Home to Shuklaphanta National Park (305 km²), featuring the world's largest herd of swamp deer and significant tiger populations. The park contains the largest continuous grassland in Nepal alongside subtropical forests and wetlands.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h4>Darchula</h4>
+                            <p>Remote mountainous district bordering India and China with the sacred Byas Valley (Byans Valley), unique Rang (Shauka) culture, and gateway to Api Himal and Kailash Mansarovar pilgrimage route.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h4>Dadeldhura</h4>
+                            <p>Historical hill district featuring Amargadhi Fort, built during the unification of Nepal. Its strategic location offers panoramic views of the surrounding hills and, on clear days, the Indian plains.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="culture" class="section province-section">
+            <div class="container">
+                <h2>Culture & People</h2>
+                <div class="culture-tabs">
+                    <input type="radio" name="culture-tab" id="tab1" checked>
+                    <label for="tab1">Ethnic Groups</label>
+                    
+                    <input type="radio" name="culture-tab" id="tab2">
+                    <label for="tab2">Languages</label>
+                    
+                    <input type="radio" name="culture-tab" id="tab3">
+                    <label for="tab3">Festivals</label>
+                    
+                    <div class="tab-content" id="tab1-content">
+                        <div class="ethnic-grid">
+                            <div class="ethnic-card">
+                                <h4>Doteli/Far-Western Khas</h4>
+                                <p>Predominant group in the hills with distinct language, customs, and traditions. Known for preserving ancient Khas cultural practices and folklore that have largely disappeared elsewhere in Nepal.</p>
+                            </div>
+                            <div class="ethnic-card">
+                                <h4>Tharu</h4>
+                                <p>Indigenous inhabitants of Terai regions in Kailali and Kanchanpur districts with unique Rana Tharu subgroup. Known for colorful attire, traditional Holi-ghar mud houses with artistic wall paintings, and rich folklore.</p>
+                            </div>
+                            <div class="ethnic-card">
+                                <h4>Rang (Shauka)</h4>
+                                <p>Rare Indo-Tibetan community in upper Darchula practicing transhumance (seasonal migration) with livestock. Known for unique cultural practices including the traditional "Jhura" marriage system and the "Chhanga" festival.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab2-content">
+                        <div class="language-grid">
+                            <div class="language-card">
+                                <h4>Doteli</h4>
+                                <p>Main language of hill districts (approx. 45%), considered either a dialect of Nepali or separate language. Features distinct vocabulary and grammatical structures that preserve ancient forms of Khas language.</p>
+                            </div>
+                            <div class="language-card">
+                                <h4>Nepali</h4>
+                                <p>Official language (approx. 30%) used in education, administration, and inter-ethnic communication. Far-western dialect has unique expressions and accent.</p>
+                            </div>
+                            <div class="language-card">
+                                <h4>Tharu/Rana</h4>
+                                <p>Indigenous language (approx. 15%) spoken primarily in Terai districts, with the Rana Tharu dialect having significant differences from eastern Tharu variants.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab3-content">
+                        <div class="festival-grid">
+                            <div class="festival-card">
+                                <h4>Gaura Parva</h4>
+                                <p>Most significant festival of Sudurpashchim celebrating the marriage of Lord Shiva and Goddess Parvati over 8-10 days. Features unique rituals like Gavari (staying awake), Deuda dancing, and special songs with circular dance formations.</p>
+                            </div>
+                            <div class="festival-card">
+                                <h4>Chaitali Purnima</h4>
+                                <p>Spring festival celebrated on the full moon day of the month of Chaitra with ritual bathing in sacred rivers (especially Mahakali) and fasting. Known for cultural performances and community gatherings.</p>
+                            </div>
+                            <div class="festival-card">
+                                <h4>Maghi</h4>
+                                <p>Important festival for Tharu communities marking the end of winter and beginning of agricultural year. Features distinctive rituals including house cleaning, feast preparation, and traditional Tharu dances.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tourism" class="section province-section">
+            <div class="container">
+                <h2>Tourism Highlights</h2>
+                <div class="tourism-grid">
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/shuklaphanta.jpg');">
+                            <div class="site-name">Shuklaphanta National Park</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Shuklaphanta National Park</h3>
+                            <p>Established in 1976 and covering 305 km², this less-visited national park offers authentic wildlife experiences without crowds. Famous for having the world's largest concentration of swamp deer (over 2,000) and significant tiger populations, with recent evidence of rhino migration from Bardiya.</p>
+                        </div>
+                    </div>
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/khaptad.jpg');">
+                            <div class="site-name">Khaptad National Park</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Khaptad National Park</h3>
+                            <p>Unique high-altitude plateau (3,000m) covering 225 km² across four districts. Features 22 high-altitude lakes, over 300 species of medicinal herbs, and the ashram of sage Khaptad Baba. The vast meadows called "Patans" burst with wildflowers during spring and monsoon seasons.</p>
+                        </div>
+                    </div>
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/api-base-camp.jpg');">
+                            <div class="site-name">Api Base Camp</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Api Base Camp Trek</h3>
+                            <p>Emerging trekking destination to the base of Api Himal (7,132m) in Darchula district. This off-the-beaten-path trek offers pristine mountain views, cultural encounters with Byasi (Rang) communities, and unspoiled alpine landscapes without the crowds of eastern Nepal trekking routes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="economy" class="section province-section">
+            <div class="container">
+                <h2>Economy</h2>
+                <div class="economy-grid">
+                    <div class="economy-card">
+                        <h3>Agriculture</h3>
+                        <p>Primary economic activity with subsistence farming in hills (millet, barley, wheat) and commercial agriculture in Terai (rice, wheat, sugarcane). The province has significant potential for fruit cultivation, especially apples in higher elevations and citrus in mid-hills.</p>
+                    </div>
+                    <div class="economy-card">
+                        <h3>Remittance</h3>
+                        <p>High levels of seasonal and long-term migration to India and Gulf countries contribute significantly to household incomes. The region has historically provided labor to India's security forces, creating a remittance-dependent economy in many districts.</p>
+                    </div>
+                    <div class="economy-card">
+                        <h3>Natural Resources</h3>
+                        <p>Untapped potential in hydropower (Mahakali and Seti rivers), medicinal herbs, and forest products. Several hydropower projects are under development, including the planned Pancheshwar Multipurpose Project that would be Nepal's largest when completed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="back-to-map">
+            <a href="../index.html" class="back-button">
+                <img src="../assets/icons/back-arrow.svg" alt="Back" class="back-icon">
+                Back to Main Map
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="mountain-silhouette"></div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Sudurpashchim Province</h3>
+                <p>Nepal's westernmost province with diverse geography from Himalayan peaks to fertile plains. Known for its rich cultural heritage, unique festivals, and largely untapped tourism potential.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#geography">Geography</a></li>
+                    <li><a href="#tourism">Tourism</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Key Attractions</h3>
+                <ul>
+                    <li><a href="#tourism">Shuklaphanta National Park</a></li>
+                    <li><a href="#tourism">Khaptad National Park</a></li>
+                    <li><a href="#tourism">Api Base Camp Trek</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;  Interactive Nepal Map Project | Sudurpashchim Province</p>
+        </div>
+    </footer>
+</body>
+</html>

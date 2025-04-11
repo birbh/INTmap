@@ -1,0 +1,1247 @@
+/* ============================================= */
+/* Base Styles & Variables */
+/* ============================================= */
+:root {
+  /* Colors */
+  --primary-red: #DC143C;
+  --primary-blue: #003893;
+  --primary-white: #FFFFFF;
+  --text-dark: #333333;
+  --text-light: #F5F5F5;
+  --bg-light: #F9F9F9;
+  --bg-dark: #222222;
+  --card-bg: #FFFFFF;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.2);
+  --transition: all 0.3s ease;
+  
+  /* Province Colors */
+  --province-1: #FFD700; /* Koshi - Gold */
+  --province-2: #FFA500; /* Madhesh - Orange */
+  --province-3: #FF6347; /* Bagmati - Tomato */
+  --province-4: #ADFF2F; /* Gandaki - GreenYellow */
+  --province-5: #32CD32; /* Lumbini - LimeGreen */
+  --province-6: #00BFFF; /* Karnali - DeepSkyBlue */
+  --province-7: #9370DB; /* Sudurpashchim - MediumPurple */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Enhanced Nepali-inspired background with prayer flags and mandala patterns */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  transition: var(--transition);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.1; /* Increased from 0.04 */
+  background-image: 
+    /* Prayer flag inspired top border */
+    linear-gradient(to right, 
+      rgba(35, 79, 143, 0.7) 0%, rgba(35, 79, 143, 0.7) 20%, 
+      rgba(220, 20, 60, 0.7) 20%, rgba(220, 20, 60, 0.7) 40%, 
+      rgba(255, 215, 0, 0.7) 40%, rgba(255, 215, 0, 0.7) 60%, 
+      rgba(50, 205, 50, 0.7) 60%, rgba(50, 205, 50, 0.7) 80%,
+      rgba(255, 255, 255, 0.7) 80%, rgba(255, 255, 255, 0.7) 100%
+    ),
+    /* Himalayan mountains silhouette */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,80 L80,40 L160,70 L240,30 L320,60 L400,20 L480,50 L560,10 L640,40 L720,5 L800,30 L880,0 L960,40 L1040,15 L1120,45 L1200,25 L1200,120 L0,120 Z' fill='%23003893' opacity='0.3'%3E%3C/path%3E%3C/svg%3E"),
+    /* Temple pattern with mandalas */
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23dc143c' fill-opacity='0.3'%3E%3Cpath d='M50,50 C55.5228,50 60,45.5228 60,40 C60,34.4772 55.5228,30 50,30 C44.4772,30 40,34.4772 40,40 C40,45.5228 44.4772,50 50,50 Z M30,50 C35.5228,50 40,45.5228 40,40 C40,34.4772 35.5228,30 30,30 C24.4772,30 20,34.4772 20,40 C20,45.5228 24.4772,50 30,50 Z M50,30 C55.5228,30 60,25.5228 60,20 C60,14.4772 55.5228,10 50,10 C44.4772,10 40,14.4772 40,20 C40,25.5228 44.4772,30 50,30 Z M30,30 C35.5228,30 40,25.5228 40,20 C40,14.4772 35.5228,10 30,10 C24.4772,10 20,14.4772 20,20 C20,25.5228 24.4772,30 30,30 Z M40,20 L40,60 M20,40 L60,40'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+    /* Traditional Nepali geometric patterns */
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23003893' fill-opacity='0.2'%3E%3Cpath d='M0,30 L30,0 L60,30 L30,60 L0,30 Z M30,30 L15,15 L30,0 L45,15 L30,30 Z M30,30 L45,15 L60,30 L45,45 L30,30 Z M30,30 L45,45 L30,60 L15,45 L30,30 Z M30,30 L15,45 L0,30 L15,15 L30,30 Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-position: 
+    top center,
+    center bottom,
+    center center,
+    center center;
+  background-size: 
+    100% 8px,
+    100% 120px,
+    200px 200px,
+    120px 120px;
+  background-repeat: 
+    repeat-x,
+    repeat-x,
+    repeat,
+    repeat;
+}
+
+/* Add more depth with accent corners */
+body::after {
+  content: "";
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  right: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M100,0 L100,100 L0,100 C55,90 90,55 100,0 Z' fill='%23dc143c' fill-opacity='0.1'/%3E%3C/svg%3E"); /* Increased fill-opacity from 0.03 */
+  background-size: cover;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Content needs relative position to appear above the backgrounds */
+.container {
+  position: relative;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+/* Remove any dark mode toggle styles */
+.dark-mode-toggle {
+  display: none;  /* Hide the dark mode toggle completely */
+}
+
+.toggle-checkbox, .toggle-label, .toggle-handle, .toggle-text {
+  display: none;  /* Hide all toggle elements */
+}
+
+/* General flag styling */
+.flag-icon {
+    position: absolute; /* Ensure it is positioned relative to its container */
+    top: 10px; /* Adjust the top position */
+    right: 10px; /* Adjust the right position */
+    width: 50px; /* Set a fixed width */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .flag-icon {
+        top: 5px; /* Adjust position for smaller screens */
+        right: 5px;
+        width: 30px; /* Reduce size for mobile devices */
+    }
+}
+
+/* ============================================= */
+/* Header & Navigation */
+/* ============================================= */
+.header {
+  background: linear-gradient(135deg, rgba(220, 20, 60, 0.9), rgba(0, 56, 147, 0.9)); /* Increased alpha values */
+  color: var(--primary-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.flag-colors {
+  display: flex;
+  height: 8px;
+}
+
+.flag-colors .crimson {
+  background-color: var(--primary-red);
+  flex: 1;
+}
+
+.flag-colors .blue {
+  background-color: var(--primary-blue);
+  flex: 1;
+}
+
+.flag-colors .white {
+  background-color: var(--primary-white);
+  flex: 1;
+}
+
+.header-content {
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 0;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar a {
+  color: var(--primary-white);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.navbar a:hover, .navbar a:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================= */
+/* Main Page Styles */
+/* ============================================= */
+.map-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.about-card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.icon-container {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  background-color: rgba(220, 20, 60, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.did-you-know {
+  margin-top: 3rem;
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.facts-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+}
+
+.facts-carousel::-webkit-scrollbar {
+  height: 5px;
+}
+
+.facts-carousel::-webkit-scrollbar-thumb {
+  background-color: var(--primary-red);
+  border-radius: 5px;
+}
+
+.fact {
+  min-width: 300px;
+  padding: 1.5rem;
+  background-color: rgba(220, 20, 60, 0.1);
+  border-left: 4px solid var(--primary-red);
+  scroll-snap-align: start;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.fact:hover {
+  transform: translateY(-5px) translateX(3px);
+  box-shadow: var(--shadow);
+  background-color: rgba(220, 20, 60, 0.15);
+}
+
+/* Interactive Map Section */
+.map-section {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.map-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.map-legend {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.province-1 { background-color: var(--province-1); }
+.province-2 { background-color: var(--province-2); }
+.province-3 { background-color: var(--province-3); }
+.province-4 { background-color: var(--province-4); }
+.province-5 { background-color: var(--province-5); }
+.province-6 { background-color: var(--province-6); }
+.province-7 { background-color: var(--province-7); }
+
+.svg-map-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.nepal-svg {
+  width: auto;
+  height: auto;
+  display: block;
+  background-color: var(--bg-visual);
+}
+
+/* Province Styles in SVG */
+.province {
+  stroke: #555;
+  stroke-width: 1;
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+.province:hover, .province:focus {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+  stroke-width: 2;
+}
+
+/* Add specific hover effects for province paths within province links */
+.province-link path {
+  transition: filter 0.3s ease, stroke-width 0.3s ease;
+  stroke: rgba(0, 0, 0, 0.3);
+  stroke-width: 0.5;
+  cursor: pointer;
+}
+
+.province-link:hover path, .province-link:focus path {
+  filter: brightness(1.1) drop-shadow(0 0 3px rgba(255, 255, 255, 0.4));
+  stroke-width: 1.5;
+}
+
+.district-border {
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 1;
+  stroke-dasharray: 2,2;
+  fill: none;
+  pointer-events: none;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.province:hover .district-border,
+.province-link:hover .district-border {
+  opacity: 1;
+}
+
+.province-1 { fill: var(--province-1); }
+.province-2 { fill: var(--province-2); }
+.province-3 { fill: var(--province-3); }
+.province-4 { fill: var(--province-4); }
+.province-5 { fill: var(--province-5); }
+.province-6 { fill: var(--province-6); }
+.province-7 { fill: var(--province-7); }
+
+.province-label {
+  font-size: 25px;
+  font-weight: bold;
+  fill: var(--text-dark);
+  pointer-events: none;
+}
+
+/* City Markers */
+.city {
+  fill: var(--primary-blue);
+  stroke: var(--primary-white);
+  stroke-width: 1.5;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.city:hover, .city:focus {
+  fill: var(--primary-red);
+  transform: scale(1.3);
+}
+
+.city-label {
+  font-size: 13px;
+  font-weight: bold;
+  fill: var(--text-dark);
+  display: none;
+  pointer-events: none;
+}
+
+.city:hover + .city-label,
+.city:focus + .city-label {
+  display: block;
+}
+
+.kathmandu {
+  fill: #FF0000;
+  stroke-width: 2;
+}
+
+/* Everest Marker Animation */
+.everest-marker {
+  cursor: pointer;
+}
+
+.everest-dot {
+  fill: #cd71eb;
+  stroke: #FF0000;
+  stroke-width: 1.5;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.mountain-label {
+  font-size: 19px;
+  font-weight: bold;
+  fill: var(--text-dark);
+}
+
+/* Province Quick Links */
+.province-quick-links {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.province-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.province-button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: var(--transition);
+  color: var(--text-light);
+  min-width: 120px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.province-button:hover, .province-button:focus {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.province-button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.province-button:hover:before {
+  left: 100%;
+}
+
+.province-1-bg { background-color: var(--province-1); }
+.province-2-bg { background-color: var(--province-2); }
+.province-3-bg { background-color: var(--province-3); }
+.province-4-bg { background-color: var(--province-4); }
+.province-5-bg { background-color: var(--province-5); }
+.province-6-bg { background-color: var(--province-6); }
+.province-7-bg { background-color: var(--province-7); }
+
+/* ============================================= */
+/* UNESCO Section */
+/* ============================================= */
+.unesco-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.unesco-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.unesco-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.unesco-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.site-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.unesco-content {
+  padding: 1.5rem;
+}
+
+.unesco-content h3 {
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================= */
+/* Culture Section */
+/* ============================================= */
+.culture-tabs {
+  margin-top: 2rem;
+}
+
+.culture-tabs input[type="radio"] {
+  display: none;
+}
+
+.culture-tabs label {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--card-bg);
+  border-radius: 30px 30px 0 0;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.culture-tabs label:hover {
+  background-color: rgba(220, 20, 60, 0.15);
+  transform: translateY(-2px);
+}
+
+.culture-tabs label:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-red);
+  transition: width 0.3s ease;
+}
+
+.culture-tabs label:hover:before {
+  width: 100%;
+}
+
+.culture-tabs input[type="radio"]:checked + label {
+  background-color: var(--primary-red);
+  color: white;
+}
+
+.tab-content {
+  display: none;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 0 8px 8px 8px;
+  box-shadow: var(--shadow);
+}
+
+#tab1:checked ~ #tab1-content,
+#tab2:checked ~ #tab2-content,
+#tab3:checked ~ #tab3-content {
+  display: block;
+}
+
+.festival-grid, .cuisine-grid, .dress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.festival-card, .cuisine-card, .dress-card {
+  background-color: rgba(220, 20, 60, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.festival-card:hover, .cuisine-card:hover, .dress-card:hover {
+  transform: translateY(-5px) translateX(5px);
+  box-shadow: var(--shadow);
+}
+
+.festival-card h3, .cuisine-card h3, .dress-card h3 {
+  color: var(--primary-red);
+}
+
+/* ============================================= */
+/* Province Page Styles */
+/* ============================================= */
+.province-hero {
+  padding: 4rem 0;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.province-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+  z-index: 1;
+}
+
+.province-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.province-title h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.province-title span {
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.province-title p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.geo-grid, .economy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.geo-card, .economy-card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.geo-card:hover, .economy-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.province-map-container {
+  margin-top: 3rem;
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.province-shape {
+  fill-opacity: 0.2;
+  stroke-width: 2;
+  transition: var(--transition);
+}
+
+.province-shape.province-1 { stroke: var(--province-1); }
+.province-shape.province-2 { stroke: var(--province-2); }
+.province-shape.province-3 { stroke: var(--province-3); }
+.province-shape.province-4 { stroke: var(--province-4); }
+.province-shape.province-5 { stroke: var(--province-5); }
+.province-shape.province-6 { stroke: var(--province-6); }
+.province-shape.province-7 { stroke: var(--province-7); }
+
+.capital-dot {
+  fill: var(--primary-red);
+  stroke: white;
+  stroke-width: 2;
+  animation: pulse 2s infinite;
+}
+
+.capital-label {
+  font-size: 12px;
+  font-weight: bold;
+  fill: var(--text-dark);
+}
+
+.landmark-dot {
+  fill: var(--primary-blue);
+  stroke: white;
+  stroke-width: 1.5;
+}
+
+.landmark-label {
+  font-size: 10px;
+  fill: var(--text-dark);
+}
+
+.districts-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.districts-list ul {
+  columns: 2;
+  column-gap: 2rem;
+  margin-top: 1rem;
+}
+
+.districts-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+  transition: var(--transition);
+}
+
+.districts-list li:hover {
+  transform: translateX(5px);
+  color: var(--primary-red);
+}
+
+.districts-list li:hover::before {
+  transform: scale(1.5);
+}
+
+.districts-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: var(--province-1);
+  border-radius: 50%;
+}
+
+.district-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.highlight-card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border-left: 4px solid transparent;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px) translateX(3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.highlight-card h4 {
+  color: var(--province-1);
+}
+
+.ethnic-grid, .language-grid, .festival-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.ethnic-card, .language-card, .festival-card {
+  background-color: rgba(255, 215, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--province-1);
+  transition: var(--transition);
+}
+
+.ethnic-card:hover, .language-card:hover, .festival-card:hover {
+  transform: translateY(-5px) translateX(5px);
+  box-shadow: var(--shadow);
+}
+
+.tourism-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tourism-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+}
+
+.tourism-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.tourism-card:hover .site-name {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  padding-bottom: 1.5rem;
+}
+
+.tourism-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: var(--transition);
+}
+
+.tourism-card:hover .tourism-image {
+  transform: scale(1.05);
+}
+
+.site-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.tourism-content {
+  padding: 1.5rem;
+}
+
+.tourism-content h3 {
+  color: var(--province-1);
+}
+
+.back-to-map {
+  text-align: center;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 2; /* Higher z-index than mountain-silhouette */
+}
+
+.back-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--province-1);
+  color: white;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for better visibility */
+}
+
+.back-button:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.back-button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.back-button:hover:before {
+  left: 100%;
+}
+
+.back-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+  filter: brightness(0) invert(1); /* Make the icon white */
+  transition: var(--transition);
+}
+
+.back-button:hover .back-icon {
+  transform: translateX(-3px); /* Add a subtle animation when hovering */
+}
+
+/* Province-specific highlight borders */
+.province-1-page .highlight-card { border-left-color: var(--province-1); }
+.province-2-page .highlight-card { border-left-color: var(--province-2); }
+.province-3-page .highlight-card { border-left-color: var(--province-3); }
+.province-4-page .highlight-card { border-left-color: var(--province-4); }
+.province-5-page .highlight-card { border-left-color: var(--province-5); }
+.province-6-page .highlight-card { border-left-color: var(--province-6); }
+.province-7-page .highlight-card { border-left-color: var(--province-7); }
+
+/* Province-specific card text colors */
+.province-1-page .highlight-card h4,
+.province-1-page .tourism-content h3 {
+  color: var(--province-1);
+}
+
+.province-2-page .highlight-card h4,
+.province-2-page .tourism-content h3 {
+  color: var(--province-2);
+}
+
+.province-3-page .highlight-card h4,
+.province-3-page .tourism-content h3 {
+  color: var(--province-3);
+}
+
+.province-4-page .highlight-card h4,
+.province-4-page .tourism-content h3 {
+  color: var(--province-4);
+}
+
+.province-5-page .highlight-card h4,
+.province-5-page .tourism-content h3 {
+  color: var(--province-5);
+}
+
+.province-6-page .highlight-card h4,
+.province-6-page .tourism-content h3 {
+  color: var(--province-6);
+}
+
+.province-7-page .highlight-card h4,
+.province-7-page .tourism-content h3 {
+  color: var(--province-7);
+}
+
+/* Province-specific back buttons */
+.province-1-page .back-button { background-color: var(--province-1); }
+.province-2-page .back-button { background-color: var(--province-2); }
+.province-3-page .back-button { background-color: var(--province-3); }
+.province-4-page .back-button { background-color: var(--province-4); }
+.province-5-page .back-button { background-color: var(--province-5); }
+.province-6-page .back-button { background-color: var(--province-6); }
+.province-7-page .back-button { background-color: var(--province-7); }
+
+/* ============================================= */
+/* Footer Styles */
+/* ============================================= */
+.footer {
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  padding-top: 80px;
+  position: relative;
+}
+
+.mountain-silhouette {
+  position: absolute;
+  top: 0px; /* Adjusted from -20px to 0px to shift down more */
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23DC143C"></path><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%23DC143C"></path><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23DC143C"></path></svg>');
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none; /* Ensures clicks pass through to elements below */
+  z-index: 1; /* Lower z-index to prevent interference with interactive elements */
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.footer-section {
+  margin-bottom: 1.5rem;
+}
+
+.footer-section h3 {
+  color: var(--primary-white);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--primary-red);
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: var(--primary-white);
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.footer-section a:hover, .footer-section a:focus {
+  color: var(--primary-red);
+  transform: translateX(8px);
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.province-links {
+  columns: 2;
+  column-gap: 1rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+}
+
+/* ============================================= */
+/* Responsive Styles */
+/* ============================================= */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .navbar ul {
+    flex-direction: column;
+  }
+  
+  .navbar li {
+    margin: 0.5rem 0;
+  }
+  
+  .svg-container {
+    max-width: 100%;
+  }
+  
+  .province-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .province-button {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .culture-tabs label {
+    display: block;
+    margin-bottom: 0.5rem;
+    border-radius: 30px;
+  }
+  
+  .tab-content {
+    border-radius: 8px;
+  }
+  
+  /* Province pages */
+  .province-hero {
+    padding: 3rem 0;
+  }
+  
+  .province-map-container {
+    padding: 1rem;
+  }
+  
+  .province-label, .capital-label, .landmark-label {
+    font-size: 50px;
+  }
+  
+  .highlight-card {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mountain-label, .landmark-label {
+    display: none;
+  }
+  
+  .province-title h2 {
+    font-size: 1.8rem;
+  }
+  
+  .districts-list ul {
+    columns: 1;
+  }
+}
+
+/* ============================================= */
+/* Print Styles */
+/* ============================================= */
+@media print {
+  .header, .navbar, .footer {
+    display: none;
+  }
+  
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+  
+  .section {
+    padding: 1rem 0;
+    page-break-inside: avoid;
+  }
+  
+  .svg-container {
+    page-break-inside: avoid;
+    max-width: 100%;
+  }
+  
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+  
+  /* Province pages */
+  .province-hero {
+    background: none !important;
+    color: black !important;
+    padding: 1rem 0;
+  }
+  
+  .province-hero::before {
+    display: none;
+  }
+  
+  .province-title h2 {
+    color: black !important;
+    text-shadow: none;
+  }
+  
+  .province-map-container {
+    border: 1px solid #ccc;
+  }
+}

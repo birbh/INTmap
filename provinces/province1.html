@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koshi Province - Interactive Nepal Map</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Province-specific styles */
+        .province-hero {
+            background-image: url('../assets/images/koshi-bg.jpg');
+            background-size: cover;
+        }
+        
+        /* Province-specific colors */
+        .highlight-card h4,
+        .tourism-content h3 {
+            color: var(--province-1);
+        }
+        
+        .ethnic-card,
+        .language-card,
+        .festival-card {
+            border-left-color: var(--province-1);
+        }
+        
+        .back-button {
+            background-color: var(--province-1);
+        }
+    </style>
+</head>
+<body class="province-1-page">
+    <header class="header">
+        <div class="flag-colors">
+            <div class="crimson"></div>
+            <div class="blue"></div>
+            <div class="white"></div>
+        </div>
+        <div class="header-content">
+            <h1>Koshi Province</h1>
+            <p class="subtitle">Eastern Development Region | Capital: Biratnagar</p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Main Map</a></li>
+                <li><a href="#geography">Geography</a></li>
+                <li><a href="#districts">Districts</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#tourism">Tourism</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="province-container">
+        <section class="province-hero province-1-bg">
+            <div class="container">
+                <div class="province-title">
+                    <h2>Koshi Province <span>(कोशी प्रदेश)</span></h2>
+                    <p>Home to Mount Everest and Diverse Ethnic Cultures</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="geography" class="section province-section">
+            <div class="container">
+                <h2>Geography</h2>
+                <div class="geo-grid">
+                    <div class="geo-card">
+                        <h3>Area & Location</h3>
+                        <p>25,905 km² (10,002 sq mi), borders Tibet to the north and India to the east/south. Contains three geographical regions: Himalayan (19.72%), Hilly (53.18%), and Terai (27.1%).</p>
+                    </div>
+                    <div class="geo-card">
+                        <h3>Topography</h3>
+                        <p>Ranges from 70m elevation in Terai to 8,848m at Mt. Everest. Contains major rivers: Koshi, Tamor, Arun, and Saptakoshi.</p>
+                    </div>
+                    <div class="geo-card">
+                        <h3>Climate</h3>
+                        <p>Varied from alpine in Himalayas (-20°C winter) to subtropical in Terai (40°C summer). Annual rainfall ranges from 1,500mm to 2,500mm.</p>
+                    </div>
+                </div>
+                
+                <div class="province-map-container">
+                    <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" class="province-svg">
+                        <path d="M50,50 L100,30 L150,70 L130,120 L80,150 L40,100 Z" class="province-shape province-1"/>
+                        <!-- District borders would be added here -->
+                        <circle cx="80" cy="100" r="5" class="capital-dot" aria-label="Biratnagar, Capital of Koshi Province"/>
+                        <text x="90" y="100" class="capital-label">Biratnagar</text>
+                        <!-- Everest Marker -->
+                        <circle cx="60" cy="40" r="6" class="everest-dot"/>
+                        <text x="70" y="40" class="mountain-label">Mt. Everest</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="districts" class="section province-section">
+            <div class="container">
+                <h2>Districts</h2>
+                <div class="districts-content">
+                    <div class="districts-list">
+                        <h3>14 Districts of Koshi Province:</h3>
+                        <ul>
+                            <li>Bhojpur</li>
+                            <li>Dhankuta</li>
+                            <li>Ilam</li>
+                            <li>Jhapa</li>
+                            <li>Khotang</li>
+                            <li>Morang</li>
+                            <li>Okhaldhunga</li>
+                            <li>Panchthar</li>
+                            <li>Sankhuwasabha</li>
+                            <li>Solukhumbu</li>
+                            <li>Sunsari</li>
+                            <li>Taplejung</li>
+                            <li>Terhathum</li>
+                            <li>Udayapur</li>
+                        </ul>
+                    </div>
+                    <div class="district-highlights">
+                        <h3>District Highlights</h3>
+                        <div class="highlight-card">
+                            <h4>Solukhumbu</h4>
+                            <p>Home to Mount Everest (8,848m) and Sagarmatha National Park (UNESCO World Heritage Site). Gateway to Everest Base Camp trek.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h4>Ilam</h4>
+                            <p>Famous for tea production with beautiful tea gardens. Known as "Queen of Hills" with panoramic Himalayan views.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h4>Jhapa</h4>
+                            <p>Agricultural hub producing rice, jute, and tobacco. Contains Nepal's eastern border checkpoint at Kakarbhitta.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="culture" class="section province-section">
+            <div class="container">
+                <h2>Culture & People</h2>
+                <div class="culture-tabs">
+                    <input type="radio" name="culture-tab" id="tab1" checked>
+                    <label for="tab1">Ethnic Groups</label>
+                    
+                    <input type="radio" name="culture-tab" id="tab2">
+                    <label for="tab2">Languages</label>
+                    
+                    <input type="radio" name="culture-tab" id="tab3">
+                    <label for="tab3">Festivals</label>
+                    
+                    <div class="tab-content" id="tab1-content">
+                        <div class="ethnic-grid">
+                            <div class="ethnic-card">
+                                <h4>Limbu</h4>
+                                <p>Indigenous Kirati people with distinct culture, language (Limbu), and script (Sirijanga). Known for traditional dance forms like Chyabrung and Dhan Naach.</p>
+                            </div>
+                            <div class="ethnic-card">
+                                <h4>Rai</h4>
+                                <p>Another Kirati group with diverse sub-groups (Bantawa, Chamling, etc.). Known for their traditional music instruments like dhol, jhyamta, and tungna.</p>
+                            </div>
+                            <div class="ethnic-card">
+                                <h4>Brahmin/Chhetri</h4>
+                                <p>Predominant Hindu groups following traditional caste hierarchy. Mainly engaged in agriculture, government services, and religious activities.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab2-content">
+                        <div class="language-grid">
+                            <div class="language-card">
+                                <h4>Nepali</h4>
+                                <p>Official language spoken by majority (approx. 44%). Common medium of communication across all districts.</p>
+                            </div>
+                            <div class="language-card">
+                                <h4>Maithili</h4>
+                                <p>Spoken in southern districts (approx. 18%), especially in Morang, Sunsari, and Jhapa.</p>
+                            </div>
+                            <div class="language-card">
+                                <h4>Limbu</h4>
+                                <p>Indigenous language with its own script (approx. 8%), primarily in Taplejung, Panchthar, and Ilam.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab3-content">
+                        <div class="festival-grid">
+                            <div class="festival-card">
+                                <h4>Sakela</h4>
+                                <p>Main festival of Kirati people celebrating nature and ancestors. Performed twice yearly (Ubhauli in spring, Udhauli in winter).</p>
+                            </div>
+                            <div class="festival-card">
+                                <h4>Chasok Tangnam</h4>
+                                <p>Limbu harvest festival celebrated with traditional dance (Chyabrung) and special foods like yangben (wild mushroom) and kinema (fermented soybeans).</p>
+                            </div>
+                            <div class="festival-card">
+                                <h4>Dashain/Tihar</h4>
+                                <p>Major Hindu festivals celebrated by majority population with family gatherings, animal sacrifices, and lights/decorations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tourism" class="section province-section">
+            <div class="container">
+                <h2>Tourism Highlights</h2>
+                <div class="tourism-grid">
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/everest.jpg');">
+                            <div class="site-name">Mount Everest</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Mount Everest</h3>
+                            <p>World's highest peak (8,848m) located in Solukhumbu district. Base camp trek (EBC) takes about 12-14 days from Lukla. Sagarmatha National Park (1,148 km²) protects unique Himalayan ecosystem.</p>
+                        </div>
+                    </div>
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/ilam-tea.jpg');">
+                            <div class="site-name">Ilam Tea Gardens</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Ilam Tea Gardens</h3>
+                            <p>Beautiful tea estates producing some of Nepal's finest tea (CTC and Orthodox varieties). Mai Pokhari (lake) and Antu Danda offer panoramic views of Everest and Kanchenjunga at sunrise.</p>
+                        </div>
+                    </div>
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/kanchenjunga.jpg');">
+                            <div class="site-name">Kanchenjunga</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Kanchenjunga Conservation Area</h3>
+                            <p>Third highest mountain in the world (8,586m) with diverse flora/fauna. Home to red panda, snow leopard, and over 250 bird species. Trekking routes less crowded than Everest region.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="economy" class="section province-section">
+            <div class="container">
+                <h2>Economy</h2>
+                <div class="economy-grid">
+                    <div class="economy-card">
+                        <h3>Agriculture</h3>
+                        <p>Major crops: Rice (Jhapa/Morang), maize, wheat, tea (Ilam), cardamom (Taplejung), ginger. Jhapa and Morang are the rice bowls of Nepal with 3 crops/year in some areas.</p>
+                    </div>
+                    <div class="economy-card">
+                        <h3>Industry</h3>
+                        <p>Biratnagar industrial area with jute mills, sugar factories, and other manufacturing. Dharan is educational/healthcare hub. Major hydro projects: Upper Tamakoshi (456 MW), Arun III (900 MW).</p>
+                    </div>
+                    <div class="economy-card">
+                        <h3>Tourism</h3>
+                        <p>Mountaineering (Everest), trekking (Kanchenjunga, Makalu), tea tourism (Ilam), and religious tourism (Pathibhara Temple). Generates significant foreign income and employment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="back-to-map">
+            <a href="../index.html" class="back-button">
+                <img src="../assets/icons/back-arrow.svg" alt="Back" class="back-icon">
+                Back to Main Map
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="mountain-silhouette"></div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Koshi Province</h3>
+                <p>Easternmost province of Nepal containing diverse geography from Himalayas to Terai plains. Home to Mount Everest and rich cultural heritage.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#geography">Geography</a></li>
+                    <li><a href="#tourism">Tourism</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Key Attractions</h3>
+                <ul>
+                    <li><a href="#tourism">Mount Everest</a></li>
+                    <li><a href="#tourism">Ilam Tea Gardens</a></li>
+                    <li><a href="#tourism">Kanchenjunga</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;  Interactive Nepal Map Project | Koshi Province</p>
+        </div>
+    </footer>
+</body>
+</html>

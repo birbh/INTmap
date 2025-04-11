@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhesh Province - Interactive Nepal Map</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Province-specific styles */
+        .province-hero {
+            background-image: url('../assets/images/madhesh-bg.jpg');
+            background-size: cover;
+        }
+        
+        /* Province-specific colors */
+        .highlight-card h4,
+        .tourism-content h3 {
+            color: var(--province-2);
+        }
+        
+        .ethnic-card,
+        .language-card,
+        .festival-card {
+            border-left-color: var(--province-2);
+            background-color: rgba(255, 165, 0, 0.1);
+        }
+        
+        .back-button {
+            background-color: var(--province-2);
+        }
+    </style>
+</head>
+<body class="province-2-page">
+    <header class="header">
+        <div class="flag-colors">
+            <div class="crimson"></div>
+            <div class="blue"></div>
+            <div class="white"></div>
+        </div>
+        <div class="header-content">
+            <h1>Madhesh Province</h1>
+            <p class="subtitle">Southern Development Region | Capital: Janakpur</p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Main Map</a></li>
+                <li><a href="#geography">Geography</a></li>
+                <li><a href="#districts">Districts</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#tourism">Tourism</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main class="province-container">
+        <section class="province-hero province-2-bg">
+            <div class="container">
+                <div class="province-title">
+                    <h2>Madhesh Province <span>(मधेस प्रदेश)</span></h2>
+                    <p>Land of Plains and Rich Cultural Heritage</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="geography" class="section province-section">
+            <div class="container">
+                <h2>Geography</h2>
+                <div class="geo-grid">
+                    <div class="geo-card">
+                        <h3>Area & Location</h3>
+                        <p>9,661 km² (3,730 sq mi), making it the smallest province. It lies entirely in the Terai plains bordering India to the south.</p>
+                    </div>
+                    <div class="geo-card">
+                        <h3>Topography</h3>
+                        <p>Entirely flat Terai land with fertile alluvial soil. Major rivers include Koshi, Bagmati, Kamala, and Rapti.</p>
+                    </div>
+                    <div class="geo-card">
+                        <h3>Climate</h3>
+                        <p>Subtropical climate with hot summers (up to 45°C) and mild winters. Receives about 1,500-2,000 mm annual rainfall.</p>
+                    </div>
+                </div>
+                
+                <div class="province-map-container">
+                    <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" class="province-svg">
+                        <path d="M50,50 L100,30 L150,70 L130,120 L80,150 L40,100 Z" class="province-shape province-2"/>
+                        <circle cx="80" cy="100" r="5" class="capital-dot" aria-label="Janakpur, Capital of Madhesh Province"/>
+                        <text x="90" y="100" class="capital-label">Janakpur</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="districts" class="section province-section">
+            <div class="container">
+                <h2>Districts</h2>
+                <div class="districts-content">
+                    <div class="districts-list">
+                        <h3>8 Districts of Madhesh Province:</h3>
+                        <ul>
+                            <li>Saptari</li>
+                            <li>Siraha</li>
+                            <li>Dhanusha</li>
+                            <li>Mahottari</li>
+                            <li>Sarlahi</li>
+                            <li>Bara</li>
+                            <li>Parsa</li>
+                            <li>Rautahat</li>
+                        </ul>
+                    </div>
+                    <div class="district-highlights">
+                        <h3>District Highlights</h3>
+                        <div class="highlight-card">
+                            <h4>Dhanusha</h4>
+                            <p>Home to Janaki Temple (Janakpur), an important Hindu pilgrimage site believed to be the birthplace of Goddess Sita.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h4>Bara</h4>
+                            <p>Known for Simara Airport and industrial areas. Hosts major factories including the country's cement and steel industries.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h4>Saptari</h4>
+                            <p>Contains Koshi Tappu Wildlife Reserve, important for bird watching with over 485 bird species and home to Nepal's last surviving wild buffalos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="culture" class="section province-section">
+            <div class="container">
+                <h2>Culture & People</h2>
+                <div class="culture-tabs">
+                    <input type="radio" name="culture-tab" id="tab1" checked>
+                    <label for="tab1">Ethnic Groups</label>
+                    
+                    <input type="radio" name="culture-tab" id="tab2">
+                    <label for="tab2">Languages</label>
+                    
+                    <input type="radio" name="culture-tab" id="tab3">
+                    <label for="tab3">Festivals</label>
+                    
+                    <div class="tab-content" id="tab1-content">
+                        <div class="ethnic-grid">
+                            <div class="ethnic-card">
+                                <h4>Madhesi</h4>
+                                <p>Indigenous inhabitants of the Terai plains with distinct cultural identity and traditions tied to both Nepal and Northern Indian culture.</p>
+                            </div>
+                            <div class="ethnic-card">
+                                <h4>Tharu</h4>
+                                <p>Indigenous group of the Terai with unique traditions, colorful festivals, and distinctive housing style with mud walls and thatched roofs.</p>
+                            </div>
+                            <div class="ethnic-card">
+                                <h4>Yadav/Teli/Muslim</h4>
+                                <p>Significant communities with diverse religious and cultural practices. Known for their contributions to agriculture and trade.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab2-content">
+                        <div class="language-grid">
+                            <div class="language-card">
+                                <h4>Maithili</h4>
+                                <p>Primary language of the province (approx. 45%), especially in Dhanusha and Mahottari, with a rich literary tradition.</p>
+                            </div>
+                            <div class="language-card">
+                                <h4>Bhojpuri</h4>
+                                <p>Spoken in western districts (approx. 18%), particularly in Bara and Parsa. Known for its rich folk songs.</p>
+                            </div>
+                            <div class="language-card">
+                                <h4>Nepali</h4>
+                                <p>Official language of Nepal used in government and education (approx. 12%).</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab3-content">
+                        <div class="festival-grid">
+                            <div class="festival-card">
+                                <h4>Chhath</h4>
+                                <p>Major festival dedicated to the Sun God. Celebrated for four days with rituals performed near rivers and water bodies.</p>
+                            </div>
+                            <div class="festival-card">
+                                <h4>Holi</h4>
+                                <p>Festival of colors celebrated with enthusiasm. People throw colored powders and water at each other to celebrate the arrival of spring.</p>
+                            </div>
+                            <div class="festival-card">
+                                <h4>Jur Sital</h4>
+                                <p>Tharu New Year celebration with traditional dancing, singing, and feasting that lasts for several days.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tourism" class="section province-section">
+            <div class="container">
+                <h2>Tourism Highlights</h2>
+                <div class="tourism-grid">
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/janaki-temple.jpg');">
+                            <div class="site-name">Janaki Temple</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Janaki Temple</h3>
+                            <p>Built in 1911, this stunning white marble temple in Janakpur is dedicated to Goddess Sita (Janaki). Its unique architectural blend of Rajput and Mughal styles makes it one of Nepal's most beautiful temples.</p>
+                        </div>
+                    </div>
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/koshi-tappu.jpg');">
+                            <div class="site-name">Koshi Tappu Wildlife Reserve</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Koshi Tappu Wildlife Reserve</h3>
+                            <p>Nepal's smallest wildlife reserve (175 km²) is a wetland of international importance and a bird watcher's paradise with 485 recorded species. Home to the last remaining population of wild water buffalo.</p>
+                        </div>
+                    </div>
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/gajendra-narayan.jpg');">
+                            <div class="site-name">Gajendra Narayan Singh</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Gajendra Narayan Singh Industrial Area</h3>
+                            <p>One of Nepal's largest industrial zones located in Rajbiraj, Saptari district. Showcases the province's economic development with various manufacturing industries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="economy" class="section province-section">
+            <div class="container">
+                <h2>Economy</h2>
+                <div class="economy-grid">
+                    <div class="economy-card">
+                        <h3>Agriculture</h3>
+                        <p>Known as the "Granary of Nepal" producing rice, wheat, sugarcane, jute, and vegetables. The fertile Terai plains support year-round farming with extensive irrigation systems.</p>
+                    </div>
+                    <div class="economy-card">
+                        <h3>Industry</h3>
+                        <p>Major industrial hubs in Birgunj and Simara with sugar mills, jute factories, and cement plants. Birgunj-Pathlaiya corridor is Nepal's primary industrial belt.</p>
+                    </div>
+                    <div class="economy-card">
+                        <h3>Trade</h3>
+                        <p>Shares an open border with India through multiple checkpoints including Birgunj (largest), Biratnagar, and Jaleshwor, facilitating cross-border trade that contributes significantly to Nepal's economy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="back-to-map">
+            <a href="../index.html" class="back-button">
+                <img src="../assets/icons/back-arrow.svg" alt="Back" class="back-icon">
+                Back to Main Map
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="mountain-silhouette"></div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Madhesh Province</h3>
+                <p>Southernmost province of Nepal with flat fertile plains and rich cultural heritage. Home to diverse ethnic groups and important religious sites.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#geography">Geography</a></li>
+                    <li><a href="#tourism">Tourism</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Key Attractions</h3>
+                <ul>
+                    <li><a href="#tourism">Janaki Temple</a></li>
+                    <li><a href="#tourism">Koshi Tappu Wildlife Reserve</a></li>
+                    <li><a href="#tourism">Birgunj-Pathlaiya Industrial Corridor</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;  Interactive Nepal Map Project | Madhesh Province</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karnali Province - Interactive Nepal Map</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Province-specific styles */
+        .province-hero {
+            background-image: url('../assets/images/karnali-bg.jpg');
+            background-size: cover;
+        }
+        
+        /* Province-specific colors */
+        .highlight-card h4,
+        .tourism-content h3 {
+            color: var(--province-6);
+        }
+        
+        .ethnic-card,
+        .language-card,
+        .festival-card {
+            border-left-color: var(--province-6);
+            background-color: rgba(0, 191, 255, 0.1);
+        }
+        
+        .back-button {
+            background-color: var(--province-6);
+        }
+    </style>
+</head>
+<body class="province-6-page">
+    <header class="header">
+        <div class="flag-colors">
+            <div class="crimson"></div>
+            <div class="blue"></div>
+            <div class="white"></div>
+        </div>
+        <div class="header-content">
+            <h1>Karnali Province</h1>
+            <p class="subtitle">Capital: Birendranagar | Land of Rara Lake</p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Main Map</a></li>
+                <li><a href="#geography">Geography</a></li>
+                <li><a href="#districts">Districts</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#tourism">Tourism</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="province-container">
+        <section class="province-hero province-6-bg">
+            <div class="container">
+                <div class="province-title">
+                    <h2>Karnali Province <span>(कर्णाली प्रदेश)</span></h2>
+                    <p>Remote Mountain Province with Pristine Natural Beauty</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="geography" class="section province-section">
+            <div class="container">
+                <h2>Geography</h2>
+                <div class="geo-grid">
+                    <div class="geo-card">
+                        <h3>Area & Location</h3>
+                        <p>27,984 km² - largest province in western Nepal. Named after the Karnali River, Nepal's longest river (507 km). Remote mountainous region bordering Tibet (China) with difficult terrain and limited accessibility.</p>
+                    </div>
+                    <div class="geo-card">
+                        <h3>Topography</h3>
+                        <p>High mountains (Api Himal - 7,132m), deep valleys, and alpine lakes. Elevations range from 1,000m in southern valleys to over 7,000m in northern peaks. Home to Rara Lake, Nepal's largest lake at 10.8 km².</p>
+                    </div>
+                    <div class="geo-card">
+                        <h3>Climate</h3>
+                        <p>Alpine in north (as cold as -20°C in winter), temperate in mid-hills, and subtropical in southern valleys. Relatively dry climate with only 800-1,000mm annual rainfall, as mountains block monsoon clouds.</p>
+                    </div>
+                </div>
+                
+                <div class="province-map-container">
+                    <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" class="province-svg">
+                        <path d="M50,50 L100,30 L150,70 L130,120 L80,150 L40,100 Z" class="province-shape province-6"/>
+                        <circle cx="80" cy="100" r="5" class="capital-dot" aria-label="Birendranagar, Capital of Karnali"/>
+                        <text x="90" y="100" class="capital-label">Birendranagar</text>
+                        <!-- Rara Lake -->
+                        <ellipse cx="60" cy="80" rx="15" ry="8" class="lake" fill="#00BFFF" opacity="0.6" stroke="#003893" stroke-width="1"/>
+                        <text x="60" y="80" class="landmark-label">Rara Lake</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="districts" class="section province-section">
+            <div class="container">
+                <h2>Districts</h2>
+                <div class="districts-content">
+                    <div class="districts-list">
+                        <h3>10 Districts of Karnali:</h3>
+                        <ul>
+                            <li>Surkhet</li>
+                            <li>Dailekh</li>
+                            <li>Jajarkot</li>
+                            <li>Dolpa</li>
+                            <li>Jumla</li>
+                            <li>Kalikot</li>
+                            <li>Mugu</li>
+                            <li>Humla</li>
+                            <li>Western Rukum</li>
+                            <li>Salyan</li>
+                        </ul>
+                    </div>
+                    <div class="district-highlights">
+                        <h3>District Highlights</h3>
+                        <div class="highlight-card">
+                            <h4>Mugu</h4>
+                            <p>Home to Rara Lake, Nepal's largest and most pristine freshwater lake at 2,990m elevation. The surrounding Rara National Park (106 km²) protects unique alpine ecosystems and rare wildlife including red panda and musk deer.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h4>Dolpa</h4>
+                            <p>Features Shey Phoksundo National Park with Nepal's deepest lake displaying stunning turquoise waters. Dolpo region was immortalized in Peter Matthiessen's book "The Snow Leopard" and Eric Valli's film "Himalaya".</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h4>Humla</h4>
+                            <p>Nepal's most remote district and gateway to Mount Kailash in Tibet. Features unique Tibetan Buddhist culture in villages like Limi and Hilsa, and the ancient Namkha Khyung Dzong monastery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="culture" class="section province-section">
+            <div class="container">
+                <h2>Culture & People</h2>
+                <div class="culture-tabs">
+                    <input type="radio" name="culture-tab" id="tab1" checked>
+                    <label for="tab1">Ethnic Groups</label>
+                    
+                    <input type="radio" name="culture-tab" id="tab2">
+                    <label for="tab2">Languages</label>
+                    
+                    <input type="radio" name="culture-tab" id="tab3">
+                    <label for="tab3">Festivals</label>
+                    
+                    <div class="tab-content" id="tab1-content">
+                        <div class="ethnic-grid">
+                            <div class="ethnic-card">
+                                <h4>Khas/Chhetri</h4>
+                                <p>Predominant group in middle hills following Hindu traditions. Historically associated with the ancient Khas kingdom that gave rise to Khas language (precursor to modern Nepali) and unique cultural practices.</p>
+                            </div>
+                            <div class="ethnic-card">
+                                <h4>Thakuri</h4>
+                                <p>Traditional ruling class in western Nepal with ancestral ties to historic kingdoms. Many Thakuri clans in Karnali claim lineage from ancient rulers and maintain distinct cultural traditions.</p>
+                            </div>
+                            <div class="ethnic-card">
+                                <h4>Tibetan Buddhists</h4>
+                                <p>Communities in northern districts (Dolpa, Humla, Mugu) with strong cultural ties to Tibet. Practice Tibetan Buddhism with distinct architectural styles, prayer flags, mani walls, and artistic traditions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab2-content">
+                        <div class="language-grid">
+                            <div class="language-card">
+                                <h4>Khas Nepali</h4>
+                                <p>Dominant language (approx. 80%) with unique western dialects that preserve some archaic features of the original Khas language not found in standard Nepali.</p>
+                            </div>
+                            <div class="language-card">
+                                <h4>Tibetan</h4>
+                                <p>Spoken in northern border areas (approx. 10%), particularly in Dolpa, Upper Humla, and parts of Mugu where communities maintain strong cultural ties with Tibet.</p>
+                            </div>
+                            <div class="language-card">
+                                <h4>Magar/Kham</h4>
+                                <p>Indigenous languages (approx. 5%) primarily in Western Rukum and parts of Jajarkot, belonging to the Tibeto-Burman language family with distinct vocabulary and grammar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab3-content">
+                        <div class="festival-grid">
+                            <div class="festival-card">
+                                <h4>Gaura Parva</h4>
+                                <p>Major festival celebrated extensively in Sudurpaschim and Karnali provinces honoring Lord Shiva and his consort Parvati. Features unique dancing, singing, and traditional Deuda songs performed in large circles.</p>
+                            </div>
+                            <div class="festival-card">
+                                <h4>Lhosar</h4>
+                                <p>Tibetan New Year celebration in northern districts with Buddhist rituals, mask dances, and family gatherings. Different communities celebrate variants (Sonam Lhosar, Tamu Lhosar) at different times based on lunar calendar.</p>
+                            </div>
+                            <div class="festival-card">
+                                <h4>Yartung</h4>
+                                <p>Traditional horse festival celebrated in Dolpa, particularly in the ancient walled settlement of Dho Tarap. Features competitive horse racing, archery contests, and cultural performances.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tourism" class="section province-section">
+            <div class="container">
+                <h2>Tourism Highlights</h2>
+                <div class="tourism-grid">
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/rara-lake.jpg');">
+                            <div class="site-name">Rara Lake</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Rara Lake</h3>
+                            <p>Nepal's largest lake (10.8 km²) sitting at 2,990m elevation with crystal-clear blue waters surrounded by pine forests and snow-capped peaks. Often called the "Queen of Lakes," it changes color throughout the day and offers spectacular reflections of the surrounding landscape.</p>
+                        </div>
+                    </div>
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/phoksundo-lake.jpg');">
+                            <div class="site-name">Phoksundo Lake</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Phoksundo Lake</h3>
+                            <p>A spectacular turquoise-blue alpine lake in Dolpa at 3,612m elevation within Shey Phoksundo National Park. Notable for its unusual color due to mineral content and featuring dramatically vertical landscapes including a waterfall that plunges 167m near the southern end.</p>
+                        </div>
+                    </div>
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/dolpo.jpg');">
+                            <div class="site-name">Dolpo Region</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Dolpo Region</h3>
+                            <p>Remote trans-Himalayan region featuring ancient Bon and Tibetan Buddhist cultures in villages dating back centuries. The challenging Upper Dolpo Trek leads to mysterious Shey Gompa monastery (Crystal Mountain) and isolated settlements where traditional lifestyles remain largely unchanged for centuries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="economy" class="section province-section">
+            <div class="container">
+                <h2>Economy</h2>
+                <div class="economy-grid">
+                    <div class="economy-card">
+                        <h3>Agriculture</h3>
+                        <p>Subsistence farming with unique high-altitude crops including millet, buckwheat, barley, and the famous Jumli Marsi rice (grown at highest elevation in the world at 3,000m). Medicinal herbs and Non-Timber Forest Products provide significant income.</p>
+                    </div>
+                    <div class="economy-card">
+                        <h3>Animal Husbandry</h3>
+                        <p>Traditional livestock practices including yak and chauri (yak-cow hybrids) herding in northern regions. Transhumance (seasonal migration) still practiced with sheep and goat herding. Wool and dairy products are important economic outputs.</p>
+                    </div>
+                    <div class="economy-card">
+                        <h3>Tourism & Trade</h3>
+                        <p>Emerging adventure tourism with trekking routes to Rara Lake, Dolpo, and Kailash access. Traditional trans-Himalayan trade with Tibet continues in limited form with exchanges of salt, wool, and manufactured goods.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="back-to-map">
+            <a href="../index.html" class="back-button">
+                <img src="../assets/icons/back-arrow.svg" alt="Back" class="back-icon">
+                Back to Main Map
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="mountain-silhouette"></div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Karnali Province</h3>
+                <p>Nepal's most remote and mountainous province, featuring pristine alpine lakes, ancient cultures, and dramatic landscapes largely untouched by modern development.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#geography">Geography</a></li>
+                    <li><a href="#tourism">Tourism</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Key Attractions</h3>
+                <ul>
+                    <li><a href="#tourism">Rara Lake</a></li>
+                    <li><a href="#tourism">Phoksundo Lake</a></li>
+                    <li><a href="#tourism">Dolpo Region</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;  Interactive Nepal Map Project | Karnali Province</p>
+        </div>
+    </footer>
+</body>
+</html>

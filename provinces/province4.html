@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gandaki Province - Interactive Nepal Map</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Province-specific styles */
+        .province-hero {
+            background-image: url('../assets/images/gandaki-bg.jpg');
+            background-size: cover;
+        }
+        
+        /* Province-specific colors */
+        .highlight-card h4,
+        .tourism-content h3 {
+            color: var(--province-4);
+        }
+        
+        .ethnic-card,
+        .language-card,
+        .festival-card {
+            border-left-color: var(--province-4);
+            background-color: rgba(173, 255, 47, 0.1);
+        }
+        
+        .back-button {
+            background-color: var(--province-4);
+        }
+    </style>
+</head>
+<body class="province-4-page">
+    <header class="header">
+        <div class="flag-colors">
+            <div class="crimson"></div>
+            <div class="blue"></div>
+            <div class="white"></div>
+        </div>
+        <div class="header-content">
+            <h1>Gandaki Province</h1>
+            <p class="subtitle">Capital: Pokhara | Western Development Region</p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Main Map</a></li>
+                <li><a href="#geography">Geography</a></li>
+                <li><a href="#districts">Districts</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#tourism">Tourism</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="province-container">
+        <section class="province-hero province-4-bg">
+            <div class="container">
+                <div class="province-title">
+                    <h2>Gandaki Province <span>(गण्डकी प्रदेश)</span></h2>
+                    <p>Land of Mountains, Lakes and Adventure Tourism</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="geography" class="section province-section">
+            <div class="container">
+                <h2>Geography</h2>
+                <div class="geo-grid">
+                    <div class="geo-card">
+                        <h3>Area & Location</h3>
+                        <p>21,504 km² in central Nepal, containing Annapurna and Dhaulagiri ranges. Named after the Gandaki River system that flows through the province. Borders Tibet (China) to the north.</p>
+                    </div>
+                    <div class="geo-card">
+                        <h3>Topography</h3>
+                        <p>Contains some of world's highest peaks (Annapurna I - 8,091m, Dhaulagiri - 8,167m). Features the world's deepest gorge, Kali Gandaki, with Himalayan peaks on either side. Elevation ranges from 200m to over 8,000m.</p>
+                    </div>
+                    <div class="geo-card">
+                        <h3>Climate</h3>
+                        <p>Varied from alpine in mountains to subtropical in lower valleys. Pokhara receives heavy monsoon rains (3,500mm+) while Upper Mustang is a rain shadow area with desert-like conditions (less than 300mm rainfall).</p>
+                    </div>
+                </div>
+                
+                <div class="province-map-container">
+                    <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" class="province-svg">
+                        <path d="M50,50 L100,30 L150,70 L130,120 L80,150 L40,100 Z" class="province-shape province-4"/>
+                        <circle cx="80" cy="100" r="5" class="capital-dot" aria-label="Pokhara, Capital of Gandaki"/>
+                        <text x="90" y="100" class="capital-label">Pokhara</text>
+                        <!-- Annapurna Range -->
+                        <path d="M40,60 L60,50 L80,55 L90,45" class="mountain-range" stroke="#FFF" stroke-width="2" fill="none"/>
+                        <text x="60" y="40" class="mountain-label">Annapurna Range</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="districts" class="section province-section">
+            <div class="container">
+                <h2>Districts</h2>
+                <div class="districts-content">
+                    <div class="districts-list">
+                        <h3>11 Districts of Gandaki:</h3>
+                        <ul>
+                            <li>Gorkha</li>
+                            <li>Lamjung</li>
+                            <li>Tanahu</li>
+                            <li>Syangja</li>
+                            <li>Kaski (Pokhara)</li>
+                            <li>Manang</li>
+                            <li>Mustang</li>
+                            <li>Myagdi</li>
+                            <li>Parbat</li>
+                            <li>Baglung</li>
+                            <li>Nawalpur</li>
+                        </ul>
+                    </div>
+                    <div class="district-highlights">
+                        <h3>District Highlights</h3>
+                        <div class="highlight-card">
+                            <h4>Kaski (Pokhara)</h4>
+                            <p>Major tourist hub with Phewa Lake, World Peace Pagoda, and stunning panoramic views of Annapurna range. Gateway to popular trekking routes like Annapurna Circuit and home to numerous adventure activities.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h4>Mustang</h4>
+                            <p>Former Buddhist kingdom with strong Tibetan cultural influence. Upper Mustang (Lo Manthang) was a restricted area until 1992, featuring medieval walled city, caves, and unique desert landscapes.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h4>Gorkha</h4>
+                            <p>Historical town with iconic Gorkha Durbar (palace). Birthplace of King Prithvi Narayan Shah who unified Nepal in 18th century and origin of the famous Gurkha soldiers known worldwide for their bravery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="culture" class="section province-section">
+            <div class="container">
+                <h2>Culture & People</h2>
+                <div class="culture-tabs">
+                    <input type="radio" name="culture-tab" id="tab1" checked>
+                    <label for="tab1">Ethnic Groups</label>
+                    
+                    <input type="radio" name="culture-tab" id="tab2">
+                    <label for="tab2">Languages</label>
+                    
+                    <input type="radio" name="culture-tab" id="tab3">
+                    <label for="tab3">Festivals</label>
+                    
+                    <div class="tab-content" id="tab1-content">
+                        <div class="ethnic-grid">
+                            <div class="ethnic-card">
+                                <h4>Gurung</h4>
+                                <p>Indigenous inhabitants of central Nepal's hills with unique traditions and language. Known for their contributions to Gurkha regiments and rich cultural practices including the "Rodhi" system of communal gatherings.</p>
+                            </div>
+                            <div class="ethnic-card">
+                                <h4>Thakali</h4>
+                                <p>Traditional traders from Thak Khola valley in Mustang district known for entrepreneurship. Renowned for their hospitality, distinctive architecture, and delicious cuisine influenced by Tibetan and Nepali traditions.</p>
+                            </div>
+                            <div class="ethnic-card">
+                                <h4>Magar</h4>
+                                <p>One of Nepal's largest indigenous groups with significant population in western hills. Traditionally warriors and farmers, they have rich folk dances including Kauda, Maruni, and Sorathi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab2-content">
+                        <div class="language-grid">
+                            <div class="language-card">
+                                <h4>Nepali</h4>
+                                <p>Official language spoken by majority (approx. 65%) and used in government, education, and business throughout the province.</p>
+                            </div>
+                            <div class="language-card">
+                                <h4>Gurung</h4>
+                                <p>Tibeto-Burmese language spoken primarily in Kaski, Lamjung, and Gorkha districts (approx. 12%), with several dialects across different regions.</p>
+                            </div>
+                            <div class="language-card">
+                                <h4>Magar/Thakali</h4>
+                                <p>Indigenous languages spoken in their respective communities (approx. 10% combined). Thakali is spoken mainly in Upper Mustang while Magar has several western variants.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab3-content">
+                        <div class="festival-grid">
+                            <div class="festival-card">
+                                <h4>Tiji</h4>
+                                <p>Three-day festival in Mustang celebrating victory of good over evil. Features colorful masked dances performed by monks depicting the triumph of Buddha's incarnation over a demon.</p>
+                            </div>
+                            <div class="festival-card">
+                                <h4>Ghantu</h4>
+                                <p>Traditional Gurung dance-drama celebrating their history and mythology. Performances can last up to three days with unique costumes and intricate choreography.</p>
+                            </div>
+                            <div class="festival-card">
+                                <h4>Dashain/Tihar</h4>
+                                <p>Major Hindu festivals celebrated throughout the province with local variations. In Pokhara, features spectacular boat races on Phewa Lake during these festival periods.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tourism" class="section province-section">
+            <div class="container">
+                <h2>Tourism Highlights</h2>
+                <div class="tourism-grid">
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/annapurna.jpg');">
+                            <div class="site-name">Annapurna Circuit</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Annapurna Circuit</h3>
+                            <p>One of the world's most famous treks covering 160-230 km around the Annapurna massif. Traverses diverse landscapes from subtropical valleys to alpine zones, crosses 5,416m Thorong La pass, and encounters diverse cultures.</p>
+                        </div>
+                    </div>
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/phewa-lake.jpg');">
+                            <div class="site-name">Phewa Lake</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Phewa Lake</h3>
+                            <p>Second largest lake in Nepal located in Pokhara. Famous for boating and reflection of the Annapurna range on its surface. The lakeside area hosts numerous restaurants, hotels, and shops catering to tourists.</p>
+                        </div>
+                    </div>
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/lo-manthang.jpg');">
+                            <div class="site-name">Lo Manthang</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Lo Manthang</h3>
+                            <p>Ancient walled capital of the Kingdom of Lo (Upper Mustang) founded in 1380. Features centuries-old monasteries with rare Tibetan Buddhist art, royal palace, and unique earthen architecture preserved by its isolated location.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="economy" class="section province-section">
+            <div class="container">
+                <h2>Economy</h2>
+                <div class="economy-grid">
+                    <div class="economy-card">
+                        <h3>Tourism</h3>
+                        <p>Primary economic driver, particularly in Pokhara and trekking regions. Adventure tourism (trekking, paragliding, rafting) and cultural tourism generate significant employment and foreign exchange.</p>
+                    </div>
+                    <div class="economy-card">
+                        <h3>Agriculture</h3>
+                        <p>Terraced farming in hills produces rice, wheat, millet, and vegetables. Lower elevations support cash crops like coffee, tea, and fruits. Mustang is known for apple cultivation in its harsh climate.</p>
+                    </div>
+                    <div class="economy-card">
+                        <h3>Hydropower</h3>
+                        <p>The fast-flowing rivers of Gandaki basin have major hydroelectric potential. Several operational plants including 144 MW Kaligandaki-A, with many more projects under construction or planned.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="back-to-map">
+            <a href="../index.html" class="back-button">
+                <img src="../assets/icons/back-arrow.svg" alt="Back" class="back-icon">
+                Back to Main Map
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="mountain-silhouette"></div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Gandaki Province</h3>
+                <p>Central-western province of Nepal renowned for its natural beauty, including the Annapurna range, pristine lakes, and diverse cultural heritage spanning Himalayan to hill regions.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#geography">Geography</a></li>
+                    <li><a href="#tourism">Tourism</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Key Attractions</h3>
+                <ul>
+                    <li><a href="#tourism">Annapurna Circuit</a></li>
+                    <li><a href="#tourism">Phewa Lake</a></li>
+                    <li><a href="#tourism">Lo Manthang</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;  Interactive Nepal Map Project | Gandaki Province</p>
+        </div>
+    </footer>
+</body>
+</html>

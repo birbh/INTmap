@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumbini Province - Interactive Nepal Map</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Province-specific styles */
+        .province-hero {
+            background-image: url('../assets/images/lumbini-bg.jpg');
+            background-size: cover;
+        }
+        
+        /* Province-specific colors */
+        .highlight-card h4,
+        .tourism-content h3 {
+            color: var(--province-5);
+        }
+        
+        .ethnic-card,
+        .language-card,
+        .festival-card {
+            border-left-color: var(--province-5);
+            background-color: rgba(50, 205, 50, 0.1);
+        }
+        
+        .back-button {
+            background-color: var(--province-5);
+        }
+    </style>
+</head>
+<body class="province-5-page">
+    <header class="header">
+        <div class="flag-colors">
+            <div class="crimson"></div>
+            <div class="blue"></div>
+            <div class="white"></div>
+        </div>
+        <div class="header-content">
+            <h1>Lumbini Province</h1>
+            <p class="subtitle">Capital: Deukhuri | Birthplace of Buddha</p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Main Map</a></li>
+                <li><a href="#geography">Geography</a></li>
+                <li><a href="#districts">Districts</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#tourism">Tourism</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="province-container">
+        <section class="province-hero province-5-bg">
+            <div class="container">
+                <div class="province-title">
+                    <h2>Lumbini Province <span>(लुम्बिनी प्रदेश)</span></h2>
+                    <p>Birthplace of Lord Buddha and Land of Historical Significance</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="geography" class="section province-section">
+            <div class="container">
+                <h2>Geography</h2>
+                <div class="geo-grid">
+                    <div class="geo-card">
+                        <h3>Area & Location</h3>
+                        <p>22,288 km² in western Nepal, bordering India to south. Named after Lumbini, the birthplace of Buddha. Extends from the Terai plains to mid-hills with elevations ranging from 100m to 3,000m.</p>
+                    </div>
+                    <div class="geo-card">
+                        <h3>Topography</h3>
+                        <p>Flat Terai plains in south, rising to Churia hills and mid-hill ranges in north. Major river systems include Rapti, Babai, Tinau, and West Rapti which have created fertile valleys ideal for agriculture.</p>
+                    </div>
+                    <div class="geo-card">
+                        <h3>Climate</h3>
+                        <p>Subtropical with hot summers (up to 45°C in Terai) and mild winters. Rainfall decreases from east (1,800mm) to west (1,000mm) with distinct wet monsoon (June-September) and dry seasons.</p>
+                    </div>
+                </div>
+                
+                <div class="province-map-container">
+                    <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" class="province-svg">
+                        <path d="M50,50 L100,30 L150,70 L130,120 L80,150 L40,100 Z" class="province-shape province-5"/>
+                        <circle cx="80" cy="100" r="5" class="capital-dot" aria-label="Deukhuri, Capital of Lumbini"/>
+                        <text x="90" y="100" class="capital-label">Deukhuri</text>
+                        <!-- Lumbini marker -->
+                        <circle cx="90" cy="120" r="4" class="landmark-dot" aria-label="Lumbini, Birthplace of Buddha"/>
+                        <text x="100" y="120" class="landmark-label">Lumbini</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="districts" class="section province-section">
+            <div class="container">
+                <h2>Districts</h2>
+                <div class="districts-content">
+                    <div class="districts-list">
+                        <h3>12 Districts of Lumbini:</h3>
+                        <ul>
+                            <li>Kapilvastu</li>
+                            <li>Parasi</li>
+                            <li>Rupandehi</li>
+                            <li>Arghakhanchi</li>
+                            <li>Gulmi</li>
+                            <li>Palpa</li>
+                            <li>Dang</li>
+                            <li>Pyuthan</li>
+                            <li>Rolpa</li>
+                            <li>Eastern Rukum</li>
+                            <li>Banke</li>
+                            <li>Bardiya</li>
+                        </ul>
+                    </div>
+                    <div class="district-highlights">
+                        <h3>District Highlights</h3>
+                        <div class="highlight-card">
+                            <h4>Rupandehi</h4>
+                            <p>Home to Lumbini, birthplace of Buddha and UNESCO World Heritage Site with Maya Devi Temple, Ashoka Pillar, and monastic zones representing Buddhist traditions from different countries.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h4>Bardiya</h4>
+                            <p>Contains Bardiya National Park, Nepal's largest undisturbed wilderness area (968 km²) with incredible biodiversity including tigers, rhinoceros, elephants, and over 400 bird species.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h4>Palpa</h4>
+                            <p>Features Tansen, a historic hill town with well-preserved Newari architecture, panoramic Himalayan views, and famous for traditional handicrafts including Dhaka textiles and metalwork.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="culture" class="section province-section">
+            <div class="container">
+                <h2>Culture & People</h2>
+                <div class="culture-tabs">
+                    <input type="radio" name="culture-tab" id="tab1" checked>
+                    <label for="tab1">Ethnic Groups</label>
+                    
+                    <input type="radio" name="culture-tab" id="tab2">
+                    <label for="tab2">Languages</label>
+                    
+                    <input type="radio" name="culture-tab" id="tab3">
+                    <label for="tab3">Festivals</label>
+                    
+                    <div class="tab-content" id="tab1-content">
+                        <div class="ethnic-grid">
+                            <div class="ethnic-card">
+                                <h4>Tharu</h4>
+                                <p>Indigenous inhabitants of Terai plains with unique customs, colorful attire, and distinctive architecture featuring mud houses with thatched roofs. Known for resilience to malaria and deep connection with nature.</p>
+                            </div>
+                            <div class="ethnic-card">
+                                <h4>Magar</h4>
+                                <p>Predominant in hill districts like Palpa, Gulmi and Rolpa. Historically known as brave warriors, they have rich cultural heritage with unique dances (Kauda, Maruni) and traditional skills in agriculture.</p>
+                            </div>
+                            <div class="ethnic-card">
+                                <h4>Awadhi/Madhesi</h4>
+                                <p>Communities along the Indian border with cultural ties to northern India. Rich traditions in folk music, dance, and cuisine. Traditional occupations include trade, agriculture, and craftsmanship.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab2-content">
+                        <div class="language-grid">
+                            <div class="language-card">
+                                <h4>Nepali</h4>
+                                <p>Official language used in education and administration (approx. 48%) throughout the province, especially in hill districts.</p>
+                            </div>
+                            <div class="language-card">
+                                <h4>Tharu</h4>
+                                <p>Indigenous language with multiple dialects (approx. 15%) including Dangaura, Rana, and Kathariya variants used in Dang, Banke, and Bardiya districts.</p>
+                            </div>
+                            <div class="language-card">
+                                <h4>Awadhi</h4>
+                                <p>Indo-Aryan language (approx. 12%) spoken primarily in Kapilvastu and parts of Rupandehi, closely related to Hindi with Persian influences.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab3-content">
+                        <div class="festival-grid">
+                            <div class="festival-card">
+                                <h4>Buddha Jayanti</h4>
+                                <p>Celebration of Buddha's birth, enlightenment, and death, observed on the full moon day in May. Attracts thousands of pilgrims to Lumbini with special prayers, processions, and lantern lighting ceremonies.</p>
+                            </div>
+                            <div class="festival-card">
+                                <h4>Maghi</h4>
+                                <p>Major Tharu festival marking the end of winter and beginning of a new agricultural cycle. Features community feasting, traditional dances, and ritual bathing in rivers, celebrated in January.</p>
+                            </div>
+                            <div class="festival-card">
+                                <h4>Bhagahaur/Ghodejatra</h4>
+                                <p>Traditional horse racing festival celebrated in Terai districts, especially in Dang. Features skillful horseback riding demonstrations, races, and cultural performances.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tourism" class="section province-section">
+            <div class="container">
+                <h2>Tourism Highlights</h2>
+                <div class="tourism-grid">
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/maya-devi-temple.jpg');">
+                            <div class="site-name">Maya Devi Temple</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Maya Devi Temple, Lumbini</h3>
+                            <p>Sacred site marking the exact birthplace of Lord Buddha in 623 BCE. Features ancient ruins, the Ashoka Pillar (erected 249 BCE), and sacred pond where Buddha's mother bathed before giving birth. Surrounded by international monasteries built by Buddhist nations.</p>
+                        </div>
+                    </div>
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/bardiya-national-park.jpg');">
+                            <div class="site-name">Bardiya National Park</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Bardiya National Park</h3>
+                            <p>Nepal's largest and most undisturbed wilderness area offering excellent wildlife viewing opportunities. Known for tiger safaris (highest tiger density in Nepal), elephant encounters, and rafting on the pristine Karnali River with chances to spot endangered Gangetic dolphins.</p>
+                        </div>
+                    </div>
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/rani-mahal.jpg');">
+                            <div class="site-name">Rani Mahal</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Rani Mahal (Queen's Palace)</h3>
+                            <p>Known as the "Taj Mahal of Nepal," this stunning palace in Palpa was built in 1893 by General Khadga Shumsher as a memorial to his beloved wife. Perched dramatically above the Kali Gandaki River, it features neoclassical architecture and beautifully landscaped gardens.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="economy" class="section province-section">
+            <div class="container">
+                <h2>Economy</h2>
+                <div class="economy-grid">
+                    <div class="economy-card">
+                        <h3>Agriculture</h3>
+                        <p>Agricultural powerhouse with fertile Terai plains producing rice, wheat, maize, pulses, and oilseeds. Commercial farming of sugarcane, vegetables, and fruits is expanding. Dang Valley is known as the "granary of western Nepal."</p>
+                    </div>
+                    <div class="economy-card">
+                        <h3>Industry</h3>
+                        <p>Growing industrial sector concentrated in Bhairahawa and Nepalgunj with food processing, cement, brick, and textile factories. Special Economic Zone in Bhairahawa aims to boost export-oriented manufacturing.</p>
+                    </div>
+                    <div class="economy-card">
+                        <h3>Tourism & Trade</h3>
+                        <p>Religious tourism in Lumbini brings significant revenue. Cross-border trade with India through major checkpoints at Bhairahawa (Rupandehi) and Nepalgunj (Banke) contributes substantially to the local economy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="back-to-map">
+            <a href="../index.html" class="back-button">
+                <img src="../assets/icons/back-arrow.svg" alt="Back" class="back-icon">
+                Back to Main Map
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="mountain-silhouette"></div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Lumbini Province</h3>
+                <p>Western province of Nepal containing the birthplace of Lord Buddha, diverse cultural heritage, and varied topography from Terai plains to mid-hills.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#geography">Geography</a></li>
+                    <li><a href="#tourism">Tourism</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Key Attractions</h3>
+                <ul>
+                    <li><a href="#tourism">Lumbini</a></li>
+                    <li><a href="#tourism">Bardiya National Park</a></li>
+                    <li><a href="#tourism">Rani Mahal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;  Interactive Nepal Map Project | Lumbini Province</p>
+        </div>
+    </footer>
+</body>
+</html>

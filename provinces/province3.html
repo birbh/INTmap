@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagmati Province - Interactive Nepal Map</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Province-specific styles */
+        .province-hero {
+            background-image: url('../assets/images/bagmati-bg.jpg');
+            background-size: cover;
+        }
+        
+        /* Province-specific colors */
+        .highlight-card h4,
+        .tourism-content h3 {
+            color: var(--province-3);
+        }
+        
+        .ethnic-card,
+        .language-card,
+        .festival-card {
+            border-left-color: var(--province-3);
+            background-color: rgba(255, 99, 71, 0.1);
+        }
+        
+        .back-button {
+            background-color: var(--province-3);
+        }
+    </style>
+</head>
+<body class="province-3-page">
+    <header class="header">
+        <div class="flag-colors">
+            <div class="crimson"></div>
+            <div class="blue"></div>
+            <div class="white"></div>
+        </div>
+        <div class="header-content">
+            <h1>Bagmati Province</h1>
+            <p class="subtitle">Capital: Hetauda | Central Development Region</p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Main Map</a></li>
+                <li><a href="#geography">Geography</a></li>
+                <li><a href="#districts">Districts</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#tourism">Tourism</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="province-container">
+        <section class="province-hero province-3-bg">
+            <div class="container">
+                <div class="province-title">
+                    <h2>Bagmati Province <span>(बागमती प्रदेश)</span></h2>
+                    <p>Home to Kathmandu Valley and Most Populous Province</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="geography" class="section province-section">
+            <div class="container">
+                <h2>Geography</h2>
+                <div class="geo-grid">
+                    <div class="geo-card">
+                        <h3>Area & Location</h3>
+                        <p>Bagmati covers 20,300 km² (7,838 sq mi) in central Nepal, containing Kathmandu Valley and surrounding hills. Named after the sacred Bagmati River that flows through the valley.</p>
+                    </div>
+                    <div class="geo-card">
+                        <h3>Topography</h3>
+                        <p>Varied from Himalayan peaks (Langtang) to mid-hills and valleys. Kathmandu Valley sits at 1,400m elevation, surrounded by mountains up to 2,800m (Shivapuri, Phulchowki).</p>
+                    </div>
+                    <div class="geo-card">
+                        <h3>Climate</h3>
+                        <p>Temperate climate in valley (17°C avg), colder in mountains. Distinct wet monsoon (June-September) and dry seasons. Higher elevations receive winter snowfall, while valley remains moderate.</p>
+                    </div>
+                </div>
+                
+                <div class="province-map-container">
+                    <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" class="province-svg">
+                        <path d="M50,50 L100,30 L150,70 L130,120 L80,150 L40,100 Z" class="province-shape province-3"/>
+                        <circle cx="80" cy="100" r="6" class="capital-dot" aria-label="Hetauda, Capital of Bagmati Province"/>
+                        <text x="90" y="100" class="capital-label">Hetauda</text>
+                        <circle cx="120" cy="60" r="4" class="mountain-dot"/>
+                        <text x="130" y="60" class="mountain-label">Langtang</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="districts" class="section province-section">
+            <div class="container">
+                <h2>Districts</h2>
+                <div class="districts-content">
+                    <div class="districts-list">
+                        <h3>13 Districts of Bagmati:</h3>
+                        <ul>
+                            <li>Kathmandu</li>
+                            <li>Lalitpur</li>
+                            <li>Bhaktapur</li>
+                            <li>Kavrepalanchok</li>
+                            <li>Dhading</li>
+                            <li>Nuwakot</li>
+                            <li>Rasuwa</li>
+                            <li>Sindhupalchok</li>
+                            <li>Dolakha</li>
+                            <li>Ramechhap</li>
+                            <li>Sindhuli</li>
+                            <li>Makwanpur</li>
+                            <li>Chitwan</li>
+                        </ul>
+                    </div>
+                    <div class="district-highlights">
+                        <h3>District Highlights</h3>
+                        <div class="highlight-card">
+                            <h4>Kathmandu</h4>
+                            <p>Capital city with numerous UNESCO World Heritage sites including Durbar Square, Swayambhunath (Monkey Temple), Boudhanath Stupa, and Pashupatinath Temple.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h4>Bhaktapur</h4>
+                            <p>Medieval city with well-preserved Newari architecture and culture. Known as the "City of Devotees" with famous 55 Window Palace and Nyatapola Temple.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h4>Chitwan</h4>
+                            <p>Chitwan National Park, Nepal's first UNESCO Natural World Heritage Site. Home to endangered one-horned rhinoceros, Bengal tigers, and over 550 bird species.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="culture" class="section province-section">
+            <div class="container">
+                <h2>Culture & People</h2>
+                <div class="culture-tabs">
+                    <input type="radio" name="culture-tab" id="tab1" checked>
+                    <label for="tab1">Ethnic Groups</label>
+                    
+                    <input type="radio" name="culture-tab" id="tab2">
+                    <label for="tab2">Languages</label>
+                    
+                    <input type="radio" name="culture-tab" id="tab3">
+                    <label for="tab3">Festivals</label>
+                    
+                    <div class="tab-content" id="tab1-content">
+                        <div class="ethnic-grid">
+                            <div class="ethnic-card">
+                                <h4>Newars</h4>
+                                <p>Indigenous inhabitants of Kathmandu Valley with rich cultural heritage. Known for distinctive architecture, art, music, and cuisine. Traditional occupations include trade, craftsmanship, and agriculture.</p>
+                            </div>
+                            <div class="ethnic-card">
+                                <h4>Tamangs</h4>
+                                <p>Indigenous Tibeto-Burmese group predominantly in northern districts. Traditionally follow Buddhism mixed with shamanism. Known for their mountain skills and resilient culture.</p>
+                            </div>
+                            <div class="ethnic-card">
+                                <h4>Brahmin/Chhetri</h4>
+                                <p>Indo-Aryan groups primarily following Hindu traditions and caste system. Historically associated with governance, education, and religious practices.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab2-content">
+                        <div class="language-grid">
+                            <div class="language-card">
+                                <h4>Nepali</h4>
+                                <p>The official language spoken by majority (approx. 60%) and used in government, education, and business.</p>
+                            </div>
+                            <div class="language-card">
+                                <h4>Nepal Bhasa (Newari)</h4>
+                                <p>Traditional language of Newars with rich literary history (approx. 15%). Written in Devanagari script with distinct vocabulary and grammar.</p>
+                            </div>
+                            <div class="language-card">
+                                <h4>Tamang</h4>
+                                <p>Tibeto-Burmese language spoken in northern districts (approx. 10%). Has several dialects with significant variation between regions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab3-content">
+                        <div class="festival-grid">
+                            <div class="festival-card">
+                                <h4>Dashain</h4>
+                                <p>Most important 15-day Hindu festival celebrating goddess Durga's victory over evil. Features family gatherings, feasts, kite flying, and bamboo swings.</p>
+                            </div>
+                            <div class="festival-card">
+                                <h4>Indra Jatra</h4>
+                                <p>Eight-day celebration in Kathmandu honoring rain god Indra. Features the display of Living Goddess Kumari and impressive mask dances (Lakhe).</p>
+                            </div>
+                            <div class="festival-card">
+                                <h4>Tihar (Deepawali)</h4>
+                                <p>Five-day festival of lights honoring Laxmi (goddess of wealth). Each day has specific rituals for crows, dogs, cows, oxen, and brothers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tourism" class="section province-section">
+            <div class="container">
+                <h2>Tourism Highlights</h2>
+                <div class="tourism-grid">
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/kathmandu-durbar.jpg');">
+                            <div class="site-name">Kathmandu Durbar Square</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Kathmandu Durbar Square</h3>
+                            <p>Ancient royal palace complex with intricate wood carvings, pagoda-style temples, and courtyards. UNESCO World Heritage site featuring architectural marvels like Hanuman Dhoka Palace and Kumari Ghar (home of living goddess).</p>
+                        </div>
+                    </div>
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/chitwan-national-park.jpg');">
+                            <div class="site-name">Chitwan National Park</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Chitwan National Park</h3>
+                            <p>932 km² protected area established in 1973, offering jungle safaris, elephant rides, and bird watching. Home to 68 species of mammals including rare one-horned rhinoceros and Bengal tigers.</p>
+                        </div>
+                    </div>
+                    <div class="tourism-card">
+                        <div class="tourism-image" style="background-image: url('../assets/images/langtang.jpg');">
+                            <div class="site-name">Langtang National Park</div>
+                        </div>
+                        <div class="tourism-content">
+                            <h3>Langtang National Park</h3>
+                            <p>Nepal's first Himalayan national park covers 1,710 km² in Rasuwa district. Famous for trekking routes with stunning mountain views, alpine forests, and glacial lakes. Home to endangered red pandas and snow leopards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="economy" class="section province-section">
+            <div class="container">
+                <h2>Economy</h2>
+                <div class="economy-grid">
+                    <div class="economy-card">
+                        <h3>Tourism</h3>
+                        <p>The economic backbone with over 1 million international visitors annually (pre-pandemic). Cultural tourism in Kathmandu Valley, nature tourism in Chitwan, and trekking/adventure tourism in northern districts.</p>
+                    </div>
+                    <div class="economy-card">
+                        <h3>Services</h3>
+                        <p>The province hosts major financial institutions, IT companies, education centers, and healthcare facilities. Government services in Kathmandu contribute significantly to employment.</p>
+                    </div>
+                    <div class="economy-card">
+                        <h3>Agriculture & Industry</h3>
+                        <p>Rice, wheat, and vegetable farming in valley and surrounding areas. Industrial zones in Balaju, Patan, and Bhaktapur produce textiles, handicrafts, and consumer goods. Hydropower projects harness mountain rivers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="back-to-map">
+            <a href="../index.html" class="back-button">
+                <img src="../assets/icons/back-arrow.svg" alt="Back" class="back-icon">
+                Back to Main Map
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="mountain-silhouette"></div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Bagmati Province</h3>
+                <p>Central province of Nepal with rich cultural heritage, diverse geography, and numerous UNESCO World Heritage sites. Hetauda serves as the provincial capital while Kathmandu is the national capital.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#geography">Geography</a></li>
+                    <li><a href="#tourism">Tourism</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Key Attractions</h3>
+                <ul>
+                    <li><a href="#tourism">Kathmandu Durbar Square</a></li>
+                    <li><a href="#tourism">Chitwan National Park</a></li>
+                    <li><a href="#tourism">Langtang National Park</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;  Interactive Nepal Map Project | Bagmati Province</p>
+        </div>
+    </footer>
+</body>
+</html>
