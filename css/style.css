@@ -752,6 +752,13 @@ a {
   box-shadow: var(--shadow);
 }
 
+.province-map {
+    width: 1000px;
+    height: 450px;
+    border: 0;
+    loading: lazy;
+}
+
 .province-shape {
   fill-opacity: 0.2;
   stroke-width: 2;
@@ -1037,6 +1044,16 @@ a {
 .province-5-page .back-button { background-color: var(--province-5); }
 .province-6-page .back-button { background-color: var(--province-6); }
 .province-7-page .back-button { background-color: var(--province-7); }
+
+/* Province Note */
+.province-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    padding-top: 0.5rem;
+}
 
 /* ============================================= */
 /* Footer Styles */
