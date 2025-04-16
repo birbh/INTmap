@@ -756,7 +756,6 @@ a {
     width: 1000px;
     height: 450px;
     border: 0;
-    loading: lazy;
 }
 
 .province-shape {
