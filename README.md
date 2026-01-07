@@ -39,12 +39,8 @@ provinces/
 
 ## Credits
 
-- Created by **Biraj Bhattarai** (Grade XI DB1, Trinity International College)
+- Created by **Biraj Bhattarai** 
 - Icons and images: [Pixabay](https://pixabay.com/) and project assets
-
-## License
-
-This project is for educational purposes only.
 
 ---
 
