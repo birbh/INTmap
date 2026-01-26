@@ -31,6 +31,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Offset for fixed header if any */
+}
+
 /* Enhanced Nepali-inspired background with prayer flags and mandala patterns */
 body {
   font-family: 'Poppins', sans-serif;
@@ -39,6 +44,7 @@ body {
   background-color: var(--bg-light);
   transition: var(--transition);
   position: relative;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 body::before {
