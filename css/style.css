@@ -132,6 +132,19 @@ a {
   padding: 3rem 0;
 }
 
+.province-label {
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+        .flag-container {
+            position: absolute;
+            top: 90px;
+            right: 30px;
+        }
+        .nepali-flag {
+            width: 100px;
+            height: 120px;
+        }
+
 /* Remove any dark mode toggle styles */
 .dark-mode-toggle {
   display: none;  /* Hide the dark mode toggle completely */
@@ -160,9 +173,6 @@ a {
     }
 }
 
-/* ============================================= */
-/* Header & Navigation */
-/* ============================================= */
 .header {
   background: linear-gradient(135deg, rgba(220, 20, 60, 0.9), rgba(0, 56, 147, 0.9)); /* Increased alpha values */
   color: var(--primary-white);
@@ -378,6 +388,17 @@ a {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.nepal-map-host {
+  min-height: 320px;
+  width: 100%;
+}
+
+.nepal-map-host .nepal-svg {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .nepal-svg {
@@ -689,9 +710,6 @@ a {
   color: var(--primary-red);
 }
 
-/* ============================================= */
-/* Province Page Styles */
-/* ============================================= */
 .province-hero {
   padding: 4rem 0;
   color: white;
@@ -1145,9 +1163,6 @@ a {
   font-size: 0.9rem;
 }
 
-/* ============================================= */
-/* Responsive Styles */
-/* ============================================= */
 @media (max-width: 768px) {
   .header h1 {
     font-size: 2rem;
@@ -1217,9 +1232,6 @@ a {
   }
 }
 
-/* ============================================= */
-/* Print Styles */
-/* ============================================= */
 @media print {
   .header, .navbar, .footer {
     display: none;
