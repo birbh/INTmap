@@ -1,6 +1,4 @@
-/* ============================================= */
-/* Base Styles & Variables */
-/* ============================================= */
+
 :root {
   /* Colors */
   --primary-red: #DC143C;
@@ -958,6 +956,53 @@ a {
 
 .tourism-content h3 {
   color: var(--province-1);
+}
+
+.tourist-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+}
+
+.tourist-guide-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--primary-blue);
+}
+
+.tourist-guide-card h3 {
+  color: var(--primary-blue);
+  margin-bottom: 0.45rem;
+}
+
+.photo-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.gallery-photo-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.gallery-photo-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-photo-card figcaption {
+  padding: 0.65rem 0.8rem;
+  font-size: 0.9rem;
+  color: #4b5761;
 }
 
 .back-to-map {

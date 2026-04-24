@@ -1,6 +1,6 @@
 # Interactive Nepal Map
 
-Explore Nepal's 7 provinces, 77 districts, and rich cultural heritage with this interactive HTML & CSS map project.
+Explore Nepal's 7 provinces, 77 districts, and rich cultural heritage with this interactive  map project.
 
 ## Features
 
@@ -9,27 +9,7 @@ Explore Nepal's 7 provinces, 77 districts, and rich cultural heritage with this 
 - **UNESCO Sites**: Highlights of Nepal's World Heritage Sites.
 - **Cultural Highlights**: Major festivals, cuisines, and traditional dress.
 - **Responsive Design**: Works on desktop and mobile.
-- **No JavaScript Required**: Pure HTML and CSS.
 
-## Project Structure
-
-```
-index.html
-assets/
-  icons/
-  images/
-  maps/
-css/
-  style.css
-provinces/
-  province1.html
-  province2.html
-  province3.html
-  province4.html
-  province5.html
-  province6.html
-  province7.html
-```
 
 ## How to Use
 

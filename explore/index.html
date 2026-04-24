@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nepal Tourist Explorer</title>
+  <meta name="description" content="Find destinations in Nepal by season, budget, and interests.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/explore.css">
+</head>
+<body class="explore-page">
+  <header class="header">
+    <div class="flag-colors">
+      <div class="crimson"></div>
+      <div class="blue"></div>
+      <div class="white"></div>
+    </div>
+    <div class="header-content">
+      <h1>Nepal Tourist Explorer</h1>
+      <p class="subtitle">Smart Planning Hub For International and Nepali Travelers</p>
+    </div>
+    <nav class="navbar" aria-label="Primary">
+      <ul>
+        <li><a href="../index.html">Classic Map</a></li>
+        <li><a href="#destination-explorer">Destination Explorer</a></li>
+        <li><a href="#travel-essentials">Travel Essentials</a></li>
+        <li><a href="#featured-circuits">Featured Circuits</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="explore-main">
+    <section class="hero section">
+      <div class="container hero-content">
+        <p class="eyebrow">Travel Better In Nepal</p>
+        <h2>Plan Faster. Explore Deeper.</h2>
+        <p class="hero-text">Use smart filters to discover Nepal by season, budget, travel style, and practical trip constraints. This planner is designed to work alongside the classic interactive map.</p>
+      </div>
+    </section>
+
+    <section id="destination-explorer" class="controls section" aria-label="Destination filters">
+      <div class="container">
+        <div class="control-grid">
+          <label>
+            Search
+            <input id="searchInput" type="search" placeholder="Try: trekking, heritage, wildlife" />
+          </label>
+
+          <label>
+            Interest
+            <select id="interestSelect">
+              <option value="">All interests</option>
+              <option value="Trekking">Trekking</option>
+              <option value="Culture">Culture</option>
+              <option value="Spiritual">Spiritual</option>
+              <option value="Wildlife">Wildlife</option>
+              <option value="Food">Food</option>
+              <option value="Family">Family</option>
+            </select>
+          </label>
+
+          <label>
+            Best Season
+            <select id="seasonSelect">
+              <option value="">Any season</option>
+              <option value="Spring">Spring</option>
+              <option value="Summer">Summer</option>
+              <option value="Autumn">Autumn</option>
+              <option value="Winter">Winter</option>
+            </select>
+          </label>
+
+          <label>
+            Budget
+            <select id="budgetSelect">
+              <option value="">Any budget</option>
+              <option value="Low">Low</option>
+              <option value="Mid">Mid</option>
+              <option value="High">High</option>
+            </select>
+          </label>
+
+          <label>
+            Trip Length
+            <select id="durationSelect">
+              <option value="">Any length</option>
+              <option value="short">1-3 days</option>
+              <option value="medium">4-7 days</option>
+              <option value="long">8+ days</option>
+            </select>
+          </label>
+
+          <button id="resetBtn" class="reset-btn" type="button">Reset Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="results section" aria-live="polite">
+      <div class="container">
+        <div class="results-header">
+          <h2>Destinations</h2>
+          <p id="resultCount">Loading...</p>
+        </div>
+        <div id="cardGrid" class="card-grid"></div>
+        <p id="emptyState" class="empty-state" hidden>No destinations match these filters yet. Try fewer filters.</p>
+      </div>
+    </section>
+
+    <section id="travel-essentials" class="section">
+      <div class="container">
+        <h2>Travel Essentials For Nepal</h2>
+        <div class="essentials-grid">
+          <article class="essential-card">
+            <h3>Permits and Entry</h3>
+            <p>Carry passport copies, check visa duration, and verify trek-specific permits like TIMS and area permits before departure.</p>
+          </article>
+          <article class="essential-card">
+            <h3>Safety and Health</h3>
+            <p>For high altitude routes, add acclimatization days, hydrate properly, and monitor weather and local advisories daily.</p>
+          </article>
+          <article class="essential-card">
+            <h3>Connectivity and Payments</h3>
+            <p>Use offline maps, carry backup cash in remote areas, and keep key bookings and emergency numbers downloaded.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured-circuits" class="section">
+      <div class="container">
+        <h2>Featured Nepal Circuits</h2>
+        <div class="circuit-grid">
+          <article class="circuit-card">
+            <h3>Heritage Circuit</h3>
+            <p>Kathmandu Valley, Janakpur, and Lumbini for architecture, history, and living spiritual traditions.</p>
+          </article>
+          <article class="circuit-card">
+            <h3>Mountain Circuit</h3>
+            <p>Pokhara, Annapurna gateways, and Everest foothills for trekking and Himalayan viewpoints.</p>
+          </article>
+          <article class="circuit-card">
+            <h3>Wildlife Circuit</h3>
+            <p>Chitwan, Bardiya, and Shuklaphanta for safari experiences, wetland birds, and grassland ecosystems.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="mountain-silhouette"></div>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Tourist Explorer</h3>
+        <p>This module extends the interactive map with practical filters and destination planning tools for efficient travel decisions.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Classic Map</a></li>
+          <li><a href="#destination-explorer">Destination Explorer</a></li>
+          <li><a href="#travel-essentials">Travel Essentials</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Top Intents</h3>
+        <ul>
+          <li>Trekking</li>
+          <li>Culture and Heritage</li>
+          <li>Wildlife and Nature</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; Interactive Nepal Map Project | Tourist Explorer</p>
+    </div>
+  </footer>
+
+  <script src="js/explore.js" defer></script>
+</body>
+</html>
