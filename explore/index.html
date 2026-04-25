@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nepal Tourist Explorer</title>
   <meta name="description" content="Find destinations in Nepal by season, budget, and interests.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="css/explore.css">
@@ -18,7 +20,7 @@
     </div>
     <div class="header-content">
       <h1>Nepal Tourist Explorer</h1>
-      <p class="subtitle">Smart Planning Hub For International and Nepali Travelers</p>
+      <p class="subtitle">A Practical Trip Planner For Curious Travelers</p>
     </div>
     <nav class="navbar" aria-label="Primary">
       <ul>
@@ -33,9 +35,49 @@
   <main class="explore-main">
     <section class="hero section">
       <div class="container hero-content">
-        <p class="eyebrow">Travel Better In Nepal</p>
-        <h2>Plan Faster. Explore Deeper.</h2>
-        <p class="hero-text">Use smart filters to discover Nepal by season, budget, travel style, and practical trip constraints. This planner is designed to work alongside the classic interactive map.</p>
+        <div class="hero-copy">
+          <p class="eyebrow">Travel Better In Nepal</p>
+          <h2>Start With The Kind Of Trip You'd Actually Enjoy.</h2>
+          <p class="hero-text">Choose a season, budget, or travel style, and this page trims the list down to trips that make sense in real life. It works alongside the classic interactive map, so you can move from inspiration to planning without extra noise.</p>
+          <div class="hero-points" aria-label="Planning quick facts">
+            <div class="hero-point">
+              <span class="hero-point-label">Best for</span>
+              <span class="hero-point-value">Shortlists, not guesswork</span>
+            </div>
+            <div class="hero-point">
+              <span class="hero-point-label">Useful when</span>
+              <span class="hero-point-value">You want a trip that fits your time and budget</span>
+            </div>
+            <div class="hero-point">
+              <span class="hero-point-label">Built around</span>
+              <span class="hero-point-value">Nepal's real routes, seasons, and travel pace</span>
+            </div>
+          </div>
+        </div>
+        <aside class="hero-aside" aria-label="Featured destination preview">
+          <figure class="hero-card">
+            <img src="../assets/images/phewa-lake.jpg" alt="Phewa Lake with mountain reflections" class="hero-card-image" loading="eager" decoding="async">
+            <figcaption>
+              <span class="hero-card-kicker">Featured mood</span>
+              <strong>Pokhara at golden hour</strong>
+              <span>Soft water, clear horizons, and an easy place to start planning.</span>
+            </figcaption>
+          </figure>
+          <div class="hero-mini-grid">
+            <div class="hero-mini-card">
+              <span>Trip length</span>
+              <strong>1 to 10+ days</strong>
+            </div>
+            <div class="hero-mini-card">
+              <span>Budget</span>
+              <strong>Low to high</strong>
+            </div>
+            <div class="hero-mini-card">
+              <span>Focus</span>
+              <strong>Culture, nature, or both</strong>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -44,7 +86,7 @@
         <div class="control-grid">
           <label>
             Search
-            <input id="searchInput" type="search" placeholder="Try: trekking, heritage, wildlife" />
+            <input id="searchInput" type="search" placeholder="Try: tea hills, temples, safari" />
           </label>
 
           <label>
@@ -113,15 +155,15 @@
         <div class="essentials-grid">
           <article class="essential-card">
             <h3>Permits and Entry</h3>
-            <p>Carry passport copies, check visa duration, and verify trek-specific permits like TIMS and area permits before departure.</p>
+            <p>Before long routes, double-check visa duration, permit validity, and printed backups. Remote checkpoints still appreciate physical copies.</p>
           </article>
           <article class="essential-card">
             <h3>Safety and Health</h3>
-            <p>For high altitude routes, add acclimatization days, hydrate properly, and monitor weather and local advisories daily.</p>
+            <p>For altitude itineraries, build in acclimatization days and stay flexible. A slower plan often means a better and safer trip.</p>
           </article>
           <article class="essential-card">
             <h3>Connectivity and Payments</h3>
-            <p>Use offline maps, carry backup cash in remote areas, and keep key bookings and emergency numbers downloaded.</p>
+            <p>Offline maps and small cash notes save time in hill districts. Download bookings and emergency contacts before leaving major cities.</p>
           </article>
         </div>
       </div>
@@ -133,15 +175,15 @@
         <div class="circuit-grid">
           <article class="circuit-card">
             <h3>Heritage Circuit</h3>
-            <p>Kathmandu Valley, Janakpur, and Lumbini for architecture, history, and living spiritual traditions.</p>
+            <p>Kathmandu Valley, Janakpur, and Lumbini for architecture, rituals, and living history you can feel street by street.</p>
           </article>
           <article class="circuit-card">
             <h3>Mountain Circuit</h3>
-            <p>Pokhara, Annapurna gateways, and Everest foothills for trekking and Himalayan viewpoints.</p>
+            <p>Pokhara, Annapurna gateways, and Everest foothills for trails, sunrise viewpoints, and long mountain horizons.</p>
           </article>
           <article class="circuit-card">
             <h3>Wildlife Circuit</h3>
-            <p>Chitwan, Bardiya, and Shuklaphanta for safari experiences, wetland birds, and grassland ecosystems.</p>
+            <p>Chitwan, Bardiya, and Shuklaphanta for jungle safari days, wetland birding, and quieter grassland reserves.</p>
           </article>
         </div>
       </div>
@@ -153,7 +195,7 @@
     <div class="footer-content">
       <div class="footer-section">
         <h3>About Tourist Explorer</h3>
-        <p>This module extends the interactive map with practical filters and destination planning tools for efficient travel decisions.</p>
+        <p>This companion module helps you shortlist realistic trips quickly, then jump straight to province pages for deeper planning.</p>
       </div>
       <div class="footer-section">
         <h3>Quick Links</h3>

@@ -3,6 +3,7 @@ const state = {
   filtered: []
 };
 
+
 const searchInput = document.getElementById("searchInput");
 const interestSelect = document.getElementById("interestSelect");
 const seasonSelect = document.getElementById("seasonSelect");
@@ -18,6 +19,7 @@ function tripLengthBucket(days) {
   if (days <= 7) return "medium";
   return "long";
 }
+
 
 function matchesText(destination, query) {
   if (!query) return true;
@@ -38,7 +40,6 @@ function applyFilters() {
   const season = seasonSelect.value;
   const budget = budgetSelect.value;
   const duration = durationSelect.value;
-
   state.filtered = state.destinations.filter((destination) => {
     if (!matchesText(destination, query)) return false;
     if (interest && !destination.interests.includes(interest)) return false;
@@ -54,7 +55,7 @@ function applyFilters() {
 function renderCards() {
   cardGrid.innerHTML = "";
 
-  resultCount.textContent = `${state.filtered.length} destination${state.filtered.length === 1 ? "" : "s"} found`;
+  resultCount.textContent = `${state.filtered.length} destination${state.filtered.length === 1 ? "" : "s"} ready for your shortlist`;
   emptyState.hidden = state.filtered.length !== 0;
 
   state.filtered.forEach((destination) => {
@@ -74,11 +75,12 @@ function renderCards() {
           <span class="chip">${destination.budget} budget</span>
         </div>
         <p>${destination.summary}</p>
+        <p><strong>Why go:</strong> ${destination.highlights.join(", ")}</p>
         <p><strong>Best seasons:</strong> ${destination.bestSeasons.join(", ")}</p>
         <p><strong>Access:</strong> ${destination.transport}</p>
         <p><strong>Typical daily spend:</strong> ${destination.budgetRange}</p>
         <div class="card-links">
-          <a href="${destination.provincePage}">Province page</a>
+          <a href="${destination.provincePage}" aria-label="Open ${destination.province} province page">View province profile</a>
         </div>
       </div>
     `;
@@ -92,6 +94,31 @@ function renderCards() {
 
     cardGrid.appendChild(card);
   });
+}
+
+function addBackToTopButton() {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "back-to-top";
+  button.textContent = "Top";
+  button.setAttribute("aria-label", "Back to top");
+
+  button.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  document.body.appendChild(button);
+
+  function handleVisibility() {
+    if (window.scrollY > 320) {
+      button.classList.add("visible");
+    } else {
+      button.classList.remove("visible");
+    }
+  }
+
+  window.addEventListener("scroll", handleVisibility, { passive: true });
+  handleVisibility();
 }
 
 function bindEvents() {
@@ -121,6 +148,7 @@ async function init() {
     state.filtered = [...state.destinations];
     bindEvents();
     renderCards();
+    addBackToTopButton();
   } catch (error) {
     resultCount.textContent = "Unable to load destinations.";
     emptyState.hidden = false;
@@ -130,3 +158,4 @@ async function init() {
 }
 
 init();
+

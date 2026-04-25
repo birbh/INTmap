@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="referrer" content="strict-origin-when-cross-origin"/>
+
+
     <title>Interactive Nepal Map</title>
     <meta name="description" content="Explore Nepal's 7 provinces, 77 districts, and cultural heritage through this interactive map">
     <link rel="stylesheet" href="css/style.css">
@@ -174,6 +177,8 @@
             </div>
         </section>
 
+        <iframe width="1004" height="565" src="https://www.youtube.com/embed/TYLZG9tv0Yw" title="NEPAL: The Most Impossible Country on Earth" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         <section id="culture" class="section culture-section">
             <div class="container">
                 <h2>Cultural Highlights</h2>
@@ -297,6 +302,7 @@
             <p>&copy;  Interactive Nepal Map Project | Designed for Nepal</p>
         </div>
     </footer>
+    <button class="back-to-top" type="button" aria-label="Back to top">Top</button>
     <script>
         (async function loadNepalMap() {
             const host = document.getElementById("nepal-map-host");
@@ -322,6 +328,28 @@
                 host.innerHTML = "<p>Map failed to load.</p>";
                 console.error(err);
             }
+        })();
+
+        (function setupBackToTop() {
+            const button = document.querySelector(".back-to-top");
+            if (!button) {
+                return;
+            }
+
+            function updateVisibility() {
+                if (window.scrollY > 420) {
+                    button.classList.add("visible");
+                } else {
+                    button.classList.remove("visible");
+                }
+            }
+
+            button.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+
+            window.addEventListener("scroll", updateVisibility, { passive: true });
+            updateVisibility();
         })();
     </script>
 </body>

@@ -1,4 +1,3 @@
-
 :root {
   /* Colors */
   --primary-red: #DC143C;
@@ -242,6 +241,51 @@ a {
   background-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-3px);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a:focus-visible,
+.back-button:focus-visible,
+.reset-btn:focus-visible,
+.card-links a:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.85);
+  outline-offset: 2px;
+}
+
+body[class*="province-"] .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(6px);
+}
+
+body[class*="province-"] .navbar a.is-active {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--primary-blue);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.65rem 1rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: var(--transition);
+  z-index: 60;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 /* ============================================= */
@@ -565,17 +609,15 @@ a {
   left: 100%;
 }
 
-.province-1-bg { background-color: var(--province-1); }
+.province-1-bg { background-color: var(--province-1);  color: var(--text-dark);}
 .province-2-bg { background-color: var(--province-2); }
 .province-3-bg { background-color: var(--province-3); }
-.province-4-bg { background-color: var(--province-4); }
+.province-4-bg { background-color: var(--province-4); color: var(--text-dark);}
 .province-5-bg { background-color: var(--province-5); }
 .province-6-bg { background-color: var(--province-6); }
 .province-7-bg { background-color: var(--province-7); }
 
-/* ============================================= */
-/* UNESCO Section */
-/* ============================================= */
+
 .unesco-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1016,7 +1058,7 @@ a {
   display: inline-block;
   padding: 1rem 2rem;
   background-color: var(--province-1);
-  color: white;
+  color: rgb(0, 0, 0);
   border-radius: 30px;
   font-weight: 600;
   transition: var(--transition);
