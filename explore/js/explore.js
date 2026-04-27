@@ -75,8 +75,8 @@ function renderCards() {
           <span class="chip">${destination.budget} budget</span>
         </div>
         <p>${destination.summary}</p>
-        <p><strong>Why go:</strong> ${destination.highlights.join(", ")}</p>
-        <p><strong>Best seasons:</strong> ${destination.bestSeasons.join(", ")}</p>
+        <p><strong>Highlights:</strong> ${destination.highlights.join(" • ")}</p>
+        <p><strong>Best season(s):</strong> ${destination.bestSeasons.join(", ")}</p>
         <p><strong>Access:</strong> ${destination.transport}</p>
         <p><strong>Typical daily spend:</strong> ${destination.budgetRange}</p>
         <div class="card-links">
@@ -158,4 +158,3 @@ async function init() {
 }
 
 init();
-
