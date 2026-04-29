@@ -1,6 +1,6 @@
 # Interactive Nepal Map
 
-Explore Nepal's 7 provinces, 77 districts, and rich cultural heritage with this interactive map project.
+Discover Nepal like never before. Explore all 7 provinces and 77 districts through an interactive map, detailed province pages, cultural insights, and a smart travel planner to find your perfect destination.
 
 ## Features
 
@@ -25,3 +25,5 @@ Created by Biraj Bhattarai | Icons & images: [Pixabay](https://pixabay.com/) and
 ---
 
 Explore Nepal today!
+
+
