@@ -375,11 +375,13 @@ body[class*="province-"] .navbar a.is-active {
 
 /* Featured Explorer Section */
 .featured-explorer {
-  background-color: var(--card-bg);
-  border-radius: 8px;
+  margin-top: 3rem;
+  background-color: transparent;
   padding: 2rem;
-  margin: 2rem 0;
+  border-radius: 8px;
   box-shadow: var(--shadow);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .featured-explorer h3 {
@@ -1535,6 +1537,24 @@ body[class*="province-"] .navbar a.is-active {
   .province-video-frame {
     padding: 0.6rem;
   }
+
+  .featured-explorer {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+  }
+
+  .featured-explorer h3 {
+    font-size: 1rem;
+  }
+
+  .featured-explorer p {
+    font-size: 0.9rem;
+  }
+
+  .featured-cta {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1548,6 +1568,24 @@ body[class*="province-"] .navbar a.is-active {
   
   .districts-list ul {
     columns: 1;
+  }
+
+  .featured-explorer {
+    padding: 1rem;
+    margin: 1.5rem 0.5rem;
+  }
+
+  .featured-explorer h3 {
+    font-size: 0.95rem;
+  }
+
+  .featured-explorer p {
+    font-size: 0.85rem;
+  }
+
+  .featured-cta {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
   }
 }
 
